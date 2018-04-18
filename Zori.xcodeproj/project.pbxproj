@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		949E3E85207D11BB009E8C0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E84207D11BB009E8C0C /* AppDelegate.swift */; };
+		949E3E87207D11BB009E8C0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E86207D11BB009E8C0C /* ViewController.swift */; };
+		949E3E8A207D11BB009E8C0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E88207D11BB009E8C0C /* Main.storyboard */; };
+		949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E8B207D11BB009E8C0C /* Zori.xcdatamodeld */; };
+		949E3E8F207D11C1009E8C0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E8E207D11C1009E8C0C /* Assets.xcassets */; };
+		949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */; };
+		949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E9C207D11C1009E8C0C /* ZoriTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		949E3E99207D11C1009E8C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 949E3E79207D11BB009E8C0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 949E3E80207D11BB009E8C0C;
+			remoteInfo = Zori;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		949E3E81207D11BB009E8C0C /* Zori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zori.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		949E3E84207D11BB009E8C0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		949E3E86207D11BB009E8C0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		949E3E89207D11BB009E8C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		949E3E8C207D11BB009E8C0C /* Zori.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zori.xcdatamodel; sourceTree = "<group>"; };
+		949E3E8E207D11C1009E8C0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		949E3E91207D11C1009E8C0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		949E3E93207D11C1009E8C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		949E3E98207D11C1009E8C0C /* ZoriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		949E3E9C207D11C1009E8C0C /* ZoriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriTests.swift; sourceTree = "<group>"; };
+		949E3E9E207D11C1009E8C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		949E3E7E207D11BB009E8C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		949E3E95207D11C1009E8C0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		949E3E78207D11BB009E8C0C = {
+			isa = PBXGroup;
+			children = (
+				949E3E83207D11BB009E8C0C /* Zori */,
+				949E3E9B207D11C1009E8C0C /* ZoriTests */,
+				949E3E82207D11BB009E8C0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		949E3E82207D11BB009E8C0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				949E3E81207D11BB009E8C0C /* Zori.app */,
+				949E3E98207D11C1009E8C0C /* ZoriTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		949E3E83207D11BB009E8C0C /* Zori */ = {
+			isa = PBXGroup;
+			children = (
+				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
+				949E3E86207D11BB009E8C0C /* ViewController.swift */,
+				949E3E88207D11BB009E8C0C /* Main.storyboard */,
+				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
+				949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */,
+				949E3E93207D11C1009E8C0C /* Info.plist */,
+				949E3E8B207D11BB009E8C0C /* Zori.xcdatamodeld */,
+			);
+			path = Zori;
+			sourceTree = "<group>";
+		};
+		949E3E9B207D11C1009E8C0C /* ZoriTests */ = {
+			isa = PBXGroup;
+			children = (
+				949E3E9C207D11C1009E8C0C /* ZoriTests.swift */,
+				949E3E9E207D11C1009E8C0C /* Info.plist */,
+			);
+			path = ZoriTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		949E3E80207D11BB009E8C0C /* Zori */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 949E3EA1207D11C1009E8C0C /* Build configuration list for PBXNativeTarget "Zori" */;
+			buildPhases = (
+				949E3E7D207D11BB009E8C0C /* Sources */,
+				949E3E7E207D11BB009E8C0C /* Frameworks */,
+				949E3E7F207D11BB009E8C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zori;
+			productName = Zori;
+			productReference = 949E3E81207D11BB009E8C0C /* Zori.app */;
+			productType = "com.apple.product-type.application";
+		};
+		949E3E97207D11C1009E8C0C /* ZoriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 949E3EA4207D11C1009E8C0C /* Build configuration list for PBXNativeTarget "ZoriTests" */;
+			buildPhases = (
+				949E3E94207D11C1009E8C0C /* Sources */,
+				949E3E95207D11C1009E8C0C /* Frameworks */,
+				949E3E96207D11C1009E8C0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				949E3E9A207D11C1009E8C0C /* PBXTargetDependency */,
+			);
+			name = ZoriTests;
+			productName = ZoriTests;
+			productReference = 949E3E98207D11C1009E8C0C /* ZoriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		949E3E79207D11BB009E8C0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = ekreative;
+				TargetAttributes = {
+					949E3E80207D11BB009E8C0C = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					949E3E97207D11C1009E8C0C = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 949E3E80207D11BB009E8C0C;
+					};
+				};
+			};
+			buildConfigurationList = 949E3E7C207D11BB009E8C0C /* Build configuration list for PBXProject "Zori" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 949E3E78207D11BB009E8C0C;
+			productRefGroup = 949E3E82207D11BB009E8C0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				949E3E80207D11BB009E8C0C /* Zori */,
+				949E3E97207D11C1009E8C0C /* ZoriTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		949E3E7F207D11BB009E8C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */,
+				949E3E8F207D11C1009E8C0C /* Assets.xcassets in Resources */,
+				949E3E8A207D11BB009E8C0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		949E3E96207D11C1009E8C0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		949E3E7D207D11BB009E8C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
+				949E3E87207D11BB009E8C0C /* ViewController.swift in Sources */,
+				949E3E85207D11BB009E8C0C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		949E3E94207D11C1009E8C0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		949E3E9A207D11C1009E8C0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 949E3E80207D11BB009E8C0C /* Zori */;
+			targetProxy = 949E3E99207D11C1009E8C0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		949E3E88207D11BB009E8C0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				949E3E89207D11BB009E8C0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				949E3E91207D11C1009E8C0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		949E3E9F207D11C1009E8C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		949E3EA0207D11C1009E8C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		949E3EA2207D11C1009E8C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJNZKXGF8V;
+				INFOPLIST_FILE = Zori/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		949E3EA3207D11C1009E8C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJNZKXGF8V;
+				INFOPLIST_FILE = Zori/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		949E3EA5207D11C1009E8C0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJNZKXGF8V;
+				INFOPLIST_FILE = ZoriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zori.app/Zori";
+			};
+			name = Debug;
+		};
+		949E3EA6207D11C1009E8C0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DJNZKXGF8V;
+				INFOPLIST_FILE = ZoriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zori.app/Zori";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		949E3E7C207D11BB009E8C0C /* Build configuration list for PBXProject "Zori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				949E3E9F207D11C1009E8C0C /* Debug */,
+				949E3EA0207D11C1009E8C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		949E3EA1207D11C1009E8C0C /* Build configuration list for PBXNativeTarget "Zori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				949E3EA2207D11C1009E8C0C /* Debug */,
+				949E3EA3207D11C1009E8C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		949E3EA4207D11C1009E8C0C /* Build configuration list for PBXNativeTarget "ZoriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				949E3EA5207D11C1009E8C0C /* Debug */,
+				949E3EA6207D11C1009E8C0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		949E3E8B207D11BB009E8C0C /* Zori.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				949E3E8C207D11BB009E8C0C /* Zori.xcdatamodel */,
+			);
+			currentVersion = 949E3E8C207D11BB009E8C0C /* Zori.xcdatamodel */;
+			path = Zori.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 949E3E79207D11BB009E8C0C /* Project object */;
+}
