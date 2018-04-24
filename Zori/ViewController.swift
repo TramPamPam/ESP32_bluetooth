@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var centralManager: CBCentralManager!
     var peripheral: CBPeripheral!
     var characteristics: [CBCharacteristic] = []
+    var canWriteCharacteristics: [CBCharacteristic] = []
+    var canReadCharacteristics: [CBCharacteristic] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,7 @@ class ViewController: UIViewController {
     @IBAction func sendTapped(_ sender: UIButton) {
         let data = "Hi".data(using: .utf8)!
         
-        characteristics.forEach {
+        canWriteCharacteristics.forEach {
             peripheral.writeValue(data, for: $0, type: CBCharacteristicWriteType.withResponse)
         }
     }
@@ -118,20 +120,22 @@ extension ViewController: CBPeripheralDelegate {
             serviceStatusLabel.text = "Discovered \(service) but no characteristics"
             return
         }
-        serviceStatusLabel.text = "Discovered \(service.uuid) and \(characteristics.compactMap({ return $0.uuid }))"
         self.characteristics = characteristics
         for characteristic in characteristics {
-            print(characteristic)
-            
+//            print(characteristic)
+            debugPrint(characteristic.properties)
             if characteristic.properties.contains(.read) {
+                self.canReadCharacteristics.append(characteristic)
                 print("\(characteristic.uuid): properties contains .read")
                 peripheral.readValue(for: characteristic)
             }
-            if characteristic.properties.contains(.notify) {
-                print("\(characteristic.uuid): properties contains .notify")
+            if characteristic.properties.contains(.write) {
+                self.canWriteCharacteristics.append(characteristic)
+                print("\(characteristic.uuid): properties contains .write")
                 peripheral.setNotifyValue(true, for: characteristic)
             }
         }
+        serviceStatusLabel.text = "Discovered: readable \(canReadCharacteristics.count)\nwritable: \(canWriteCharacteristics.count)"
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
