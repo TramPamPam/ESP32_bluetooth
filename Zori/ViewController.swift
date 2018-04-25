@@ -147,6 +147,10 @@ extension ViewController: CBPeripheralDelegate {
         default:
             print("Unhandled Characteristic UUID: \(characteristic.uuid)")
         }
+        if let data = characteristic.value, let string = String(data: data, encoding: .utf8) {
+            inputLabel.text! += string
+        }
+        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
