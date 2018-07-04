@@ -41,7 +41,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sendTapped(_ sender: UIButton) {
-        let data = "Hi".data(using: .utf8)!
+        send(string: sender.titleLabel!.text!)
+    }
+    
+    func send(string: String) {
+        let data = string.data(using: .utf8)!
         
         canWriteCharacteristics.forEach {
             peripheral.writeValue(data, for: $0, type: CBCharacteristicWriteType.withResponse)
@@ -128,6 +132,7 @@ extension ViewController: CBPeripheralDelegate {
                 self.canReadCharacteristics.append(characteristic)
                 print("\(characteristic.uuid): properties contains .read")
                 peripheral.readValue(for: characteristic)
+                peripheral.setNotifyValue(true, for: characteristic)
             }
             if characteristic.properties.contains(.write) {
                 self.canWriteCharacteristics.append(characteristic)
