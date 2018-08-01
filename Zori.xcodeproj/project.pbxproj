@@ -22,6 +22,11 @@
 		A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2521119D970023C482 /* CoreDataStack.swift */; };
 		A5727F2921119E320023C482 /* MergePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2821119E320023C482 /* MergePolicy.swift */; };
 		A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2A2111A21E0023C482 /* CustomError.swift */; };
+		A5727F2E2111A68C0023C482 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2D2111A68C0023C482 /* ArticleService.swift */; };
+		A5727F302111A6A60023C482 /* ArticleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2F2111A6A60023C482 /* ArticleAPI.swift */; };
+		A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F322111A8890023C482 /* CustomTargetType.swift */; };
+		A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F342111AE710023C482 /* CustomDecodable.swift */; };
+		A5727F372111AF390023C482 /* CustomMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F362111AF390023C482 /* CustomMoyaProvider.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		A5727F2521119D970023C482 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A5727F2821119E320023C482 /* MergePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergePolicy.swift; sourceTree = "<group>"; };
 		A5727F2A2111A21E0023C482 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		A5727F2D2111A68C0023C482 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		A5727F2F2111A6A60023C482 /* ArticleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPI.swift; sourceTree = "<group>"; };
+		A5727F322111A8890023C482 /* CustomTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTargetType.swift; sourceTree = "<group>"; };
+		A5727F342111AE710023C482 /* CustomDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodable.swift; sourceTree = "<group>"; };
+		A5727F362111AF390023C482 /* CustomMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoyaProvider.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +130,9 @@
 				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
 				949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */,
 				949E3E93207D11C1009E8C0C /* Info.plist */,
+				A5727F2C2111A66C0023C482 /* Services */,
 				A5727F1C21119CF70023C482 /* CoreData */,
-				A5727F2A2111A21E0023C482 /* CustomError.swift */,
+				A5727F312111A8690023C482 /* Extensions */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -166,6 +177,26 @@
 				A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		A5727F2C2111A66C0023C482 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5727F2D2111A68C0023C482 /* ArticleService.swift */,
+				A5727F2F2111A6A60023C482 /* ArticleAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5727F312111A8690023C482 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5727F2A2111A21E0023C482 /* CustomError.swift */,
+				A5727F322111A8890023C482 /* CustomTargetType.swift */,
+				A5727F342111AE710023C482 /* CustomDecodable.swift */,
+				A5727F362111AF390023C482 /* CustomMoyaProvider.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,12 +394,17 @@
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F2221119D150023C482 /* Image+CoreDataProperties.swift in Sources */,
+				A5727F372111AF390023C482 /* CustomMoyaProvider.swift in Sources */,
 				949E3E87207D11BB009E8C0C /* ViewController.swift in Sources */,
 				949E3E85207D11BB009E8C0C /* AppDelegate.swift in Sources */,
+				A5727F302111A6A60023C482 /* ArticleAPI.swift in Sources */,
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
 				A5727F2121119D150023C482 /* Image+CoreDataClass.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
+				A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */,
+				A5727F2E2111A68C0023C482 /* ArticleService.swift in Sources */,
+				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5727F2921119E320023C482 /* MergePolicy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
