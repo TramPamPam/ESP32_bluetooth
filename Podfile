@@ -8,6 +8,7 @@ def shared_pods
 end
 
 target 'Zori' do
+  pod 'netfox', '~> 1.10'
   shared_pods
 end
 
