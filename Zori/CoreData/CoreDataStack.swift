@@ -66,7 +66,7 @@ final class CoreDataStackImplementation: CoreDataStack {
 }
 
 extension CodingUserInfoKey {
-    static let context = CodingUserInfoKey(rawValue: "context")
+    public static let context = CodingUserInfoKey(rawValue: "context")
     //    static let relativeObject = CodingUserInfoKey(rawValue: "relativeObject")
     //    static let hasLocalFiles = CodingUserInfoKey(rawValue: "hasLocalFiles")
 }

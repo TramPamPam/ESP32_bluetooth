@@ -27,6 +27,8 @@
 		A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F322111A8890023C482 /* CustomTargetType.swift */; };
 		A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F342111AE710023C482 /* CustomDecodable.swift */; };
 		A5727F372111AF390023C482 /* CustomMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F362111AF390023C482 /* CustomMoyaProvider.swift */; };
+		A5727F392111B3040023C482 /* CoreDataStackMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F382111B3040023C482 /* CoreDataStackMock.swift */; };
+		A5727F3B2111B54A0023C482 /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3A2111B54A0023C482 /* ArticleTests.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		A5727F322111A8890023C482 /* CustomTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTargetType.swift; sourceTree = "<group>"; };
 		A5727F342111AE710023C482 /* CustomDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodable.swift; sourceTree = "<group>"; };
 		A5727F362111AF390023C482 /* CustomMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoyaProvider.swift; sourceTree = "<group>"; };
+		A5727F382111B3040023C482 /* CoreDataStackMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackMock.swift; sourceTree = "<group>"; };
+		A5727F3A2111B54A0023C482 /* ArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +146,8 @@
 			children = (
 				949E3E9C207D11C1009E8C0C /* ZoriTests.swift */,
 				949E3E9E207D11C1009E8C0C /* Info.plist */,
+				A5727F382111B3040023C482 /* CoreDataStackMock.swift */,
+				A5727F3A2111B54A0023C482 /* ArticleTests.swift */,
 			);
 			path = ZoriTests;
 			sourceTree = "<group>";
@@ -414,6 +420,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */,
+				A5727F392111B3040023C482 /* CoreDataStackMock.swift in Sources */,
+				A5727F3B2111B54A0023C482 /* ArticleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

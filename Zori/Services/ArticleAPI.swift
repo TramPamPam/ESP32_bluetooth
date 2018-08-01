@@ -28,7 +28,7 @@ extension ArticleAPI: TargetType {
     }
     
     var sampleData: Data {
-        return Data()
+        return NSDataAsset(name: "articles")!.data
     }
     
     var task: Task {
@@ -38,7 +38,7 @@ extension ArticleAPI: TargetType {
     var keyPath: String? {
         switch self {
         case .getList:
-            return "nodes"
+            return "nodes.node"
         default:
             return nil
         }
