@@ -17,11 +17,11 @@ extension Article {
         return NSFetchRequest<Article>(entityName: "Article")
     }
 
-    @NSManaged public var nid: String?
-    @NSManaged public var title: String?
     @NSManaged public var body: String?
     @NSManaged public var description_rss: String?
+    @NSManaged public var nid: String?
+    @NSManaged public var title: String?
     @NSManaged public var url_json_full: String?
-    @NSManaged public var img: Image?
+    @NSManaged public var img: String?
 
 }

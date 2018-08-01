@@ -19,7 +19,7 @@ class FullArticleViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = article.title
         detailTextView.text = article.body?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        guard let articleImageSrc = article.img?.src,
+        guard let articleImageSrc = article.img,
             let url = URL(string: articleImageSrc),
             let data = try? NSData.init(contentsOf: url) as Data else { return }
         let image = UIImage(data : data)

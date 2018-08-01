@@ -42,13 +42,11 @@ class ArticleTests: XCTestCase {
             XCTAssertNotNil(article.body)
             XCTAssertNotNil(article.description_rss)
             XCTAssertNotNil(article.url_json_full)
-            
-            guard let image = article.img else { throw CustomError.missingField(field: "img") }
-            XCTAssertNotNil(image.src)
-            
+            XCTAssertNotNil(article.img)
+
             listExpectation.fulfill()
         }.catch { (error) in
-            XCTFail(error.localizedDescription)
+            XCTFail("\(error)")
         }
         
         waitForExpectations(timeout: 3.0) { (error) in

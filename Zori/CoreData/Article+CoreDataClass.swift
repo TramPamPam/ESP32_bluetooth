@@ -34,7 +34,7 @@ public class Article: NSManagedObject, Decodable {
         description_rss = try container.decodeIfPresent(String.self, forKey: .description_rss)
         url_json_full = try container.decodeIfPresent(String.self, forKey: .url_json_full)
         
-        img = try container.decodeIfPresent(Image.self, forKey: .img)
+        img = try container.decodeIfPresent(String.self, forKey: .img)
         
     }
     
