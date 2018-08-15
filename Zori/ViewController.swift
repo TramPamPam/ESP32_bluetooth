@@ -39,22 +39,41 @@ class ViewController: UIViewController {
         centralManager.stopScan()
         centralManager.scanForPeripherals(withServices: [serviceCBUUID])
     }
-    
+
+//    Available commands:
+//
+//
+//    get serial - 0x10
+//    get firmware version - 0x11
+//    get hardware version - 0x12
+//    set coordinates - 0x20 (2x8 bytes float data?)
     @IBAction func sendTapped(_ sender: UIButton) {
-        send(string: sender.titleLabel!.text!)
+        send(UInt8(sender.tag))
     }
     
-    func send(string: String) {
-        let data = string.data(using: .utf8)!
-        
+    func send(_ int: UInt8) {
+        let data = Data(toByteArray(int))
+        debugPrint(toByteArray(int))
         canWriteCharacteristics.forEach {
             peripheral.writeValue(data, for: $0, type: CBCharacteristicWriteType.withResponse)
         }
+        
     }
     
     func onHeartRateReceived(_ heartRate: Int) {
         inputLabel.text = String(heartRate)
         print("BPM: \(heartRate)")
+    }
+    
+    func toByteArray<T>(_ value: T) -> [UInt8] {
+        var value = value
+        return withUnsafeBytes(of: &value) { Array($0) }
+    }
+    
+    func fromByteArray<T>(_ value: [UInt8], _: T.Type) -> T {
+        return value.withUnsafeBytes {
+            $0.baseAddress!.load(as: T.self)
+        }
     }
 }
 
@@ -152,8 +171,13 @@ extension ViewController: CBPeripheralDelegate {
         default:
             print("Unhandled Characteristic UUID: \(characteristic.uuid)")
         }
-        if let data = characteristic.value, let string = String(data: data, encoding: .utf8) {
-            inputLabel.text! += string
+        if let char = characteristic.value, char.count > 0  {
+            debugPrint(char[0])
+        
+            if let dataString = characteristic.value?.advanced(by: 1),
+                let string = String(data: dataString, encoding: .utf8) {
+                inputLabel.text! = string
+            }
         }
         
     }
