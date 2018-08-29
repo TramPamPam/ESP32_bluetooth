@@ -14,9 +14,19 @@ let espInCharacteristicCBUUID = CBUUID(string: "6e3e4a02-2e9e-11e8-b467-0ed5f89f
 let espOutCharacteristicCBUUID = CBUUID(string: "72c31af8-2e9e-11e8-b467-0ed5f89f718b") //out
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var degreeX: UITextField!
+    @IBOutlet weak var minuteX: UITextField!
+    @IBOutlet weak var secondsX: UITextField!
+    
+    @IBOutlet weak var degreesY: UITextField!
+    @IBOutlet weak var minutesY: UITextField!
+    @IBOutlet weak var secondsY: UITextField!
+    
     @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var serviceStatusLabel: UILabel!
+    @IBOutlet weak var customCommandTextField: UITextField!
     
     var centralManager: CBCentralManager!
     var peripheral: CBPeripheral!
@@ -51,6 +61,11 @@ class ViewController: UIViewController {
         send(UInt8(sender.tag))
     }
     
+    @IBAction func customCommandSend(_ sender: UIButton) {
+        send(UInt8(customCommandTextField.text!)!)
+        customCommandTextField.resignFirstResponder()
+    }
+    
     func send(_ int: UInt8) {
         let data = Data(toByteArray(int))
         debugPrint(toByteArray(int))
@@ -75,6 +90,7 @@ class ViewController: UIViewController {
             $0.baseAddress!.load(as: T.self)
         }
     }
+    
 }
 
 //MARK: - CBCentralManagerDelegate
@@ -178,6 +194,15 @@ extension ViewController: CBPeripheralDelegate {
                 let string = String(data: dataString, encoding: .utf8) {
                 inputLabel.text! = string
             }
+            if let data = characteristic.value?.advanced(by: 1) {
+                let int32: Int32 = data.withUnsafeBytes({ (point) -> Int32 in
+                    return point.pointee
+                })
+                let value = Int(littleEndian: Int(int32))
+                let fValue = Float(value)
+                inputLabel.text?.append(" AKA \(Float(fValue/200000)) | \(int32)")
+            }
+            
         }
         
     }
@@ -192,3 +217,13 @@ extension ViewController: CBPeripheralDelegate {
     
     
 }
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return true
+    }
+}
+
+
+
