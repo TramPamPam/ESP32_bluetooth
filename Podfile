@@ -5,10 +5,10 @@ inhibit_all_warnings!
 def shared_pods
   pod 'Moya', '~> 10.0.0'
   pod 'PromiseKit', '~> 6.0'
+  pod 'netfox', ' ~> 1.11.0'
 end
 
 target 'Zori' do
-  pod 'netfox', '~> 1.10'
   shared_pods
 end
 
