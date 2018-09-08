@@ -25,14 +25,14 @@ class Angle {
         self.normalizeAngle()
     }
     
-    init(degrees: Double, minutes: Double, seconds: Double) {
+    init(degrees: Double, minutes: Double = 0.0, seconds: Double = 0.0) {
         let fr = minutes/60.0 + seconds/3600.0
         let normDegree = degrees + (degrees >= 0 ? fr : -fr)
-        self.radians = Angle(degrees: normDegree).radians
-        self.normalizeAngle()
+        self.radians = Angle.init(degrees: normDegree).radians
+//        self.normalizeAngle()
     }
     
-    init(hours: Double, minutes: Double, seconds: Double) {
+    init(hours: Double, minutes: Double = 0, seconds: Double = 0) {
         self.radians = Angle(degrees: hours*15, minutes: minutes*15, seconds: seconds*15).radians
         self.normalizeAngle()
     }
