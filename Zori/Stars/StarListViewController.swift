@@ -12,7 +12,7 @@ import PromiseKit
 
 class StarListViewController: UIViewController, Alertable {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     private var stars: [Star] = []
     
@@ -31,6 +31,12 @@ class StarListViewController: UIViewController, Alertable {
             self.tableView.reloadData()
         }.catch { (error) in
             self.showError(error)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let starDetails = segue.destination as? StarViewController, let starRow = tableView.indexPathForSelectedRow?.row {
+            starDetails.star = stars[starRow]
         }
     }
 }
@@ -55,3 +61,4 @@ extension StarListViewController: UITableViewDataSource {
         return cell
     }
 }
+
