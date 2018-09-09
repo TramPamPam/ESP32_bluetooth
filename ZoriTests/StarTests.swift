@@ -24,6 +24,47 @@ class StarTests: XCTestCase {
         super.tearDown()
     }
     
+    func testConstellationList() {
+        let coreDataStack = CoreDataStackMock()
+        coreDataStack.clearDataBase()
+        
+        let provider = ConstellationServiceImplementation(
+            api: MoyaProvider<ConstellationAPI>(stubClosure: MoyaProvider.immediatelyStub),
+            coreDataStack: coreDataStack)
+        
+        let listExpectation = expectation(description: "provider expectation")
+        provider.getList().done { (list) -> Void in
+            XCTAssert(list.count == 13, "Not all loaded. Only \(list.count)/25")
+            
+            guard let constellation = Constellation.fetchAll(from: coreDataStack.context, predicate: NSPredicate(format: "id = %@", "1")).first else {
+                let listIDs = list.compactMap { return $0.id }
+                XCTFail("no 1 constellation in \(listIDs)")
+                return
+            }
+
+            XCTAssertEqual(constellation.id, "1")
+            XCTAssertEqual(constellation.name, "Ursa Minor")
+            XCTAssertEqual(constellation.name_r, "Малая медведица")
+
+            XCTAssertNotNil(constellation.stars)
+            XCTAssertEqual(constellation.stars?.count, 3, "Not all stars mapped \(constellation.stars?.count ?? -1)/3")
+            
+            guard let stars = constellation.stars?.allObjects as? [Star] else { XCTFail(); return}
+            let ids = stars.compactMap { return $0.id }
+            XCTAssert(ids.contains("424") && ids.contains("5563") && ids.contains("5735"))
+            
+            listExpectation.fulfill()
+        }.catch { (error) in
+            XCTFail("\(error)")
+        }
+        
+        waitForExpectations(timeout: 3.0) { (error) in
+            if let error = error {
+                XCTFail(error.localizedDescription)
+            }
+        }
+    }
+    
     func testStarsList() {
         let coreDataStack = CoreDataStackMock()
         coreDataStack.clearDataBase()

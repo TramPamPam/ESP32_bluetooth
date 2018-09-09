@@ -13,9 +13,7 @@ enum ZoriAPI {
 }
 
 extension ZoriAPI: TargetType {
-    var baseURL: URL {
-        return URL(string: "http://star.3339333.xyz")!
-    }
+  
     var path: String {
         return ""
     }

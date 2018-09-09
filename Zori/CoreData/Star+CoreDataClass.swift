@@ -31,6 +31,7 @@ public class Star: NSManagedObject, Decodable {
         case vmag = "Vmag"
         case gLON = "GLON"
         case gLAT = "GLAT"
+        case img
     }
     
     public required convenience init(from decoder: Decoder) throws {
@@ -43,13 +44,14 @@ public class Star: NSManagedObject, Decodable {
         
         self.constellationID = try container.decodeIfPresent(Int32.self, forKey: .constellationID) ?? 0
         self.hr = try container.decodeIfPresent(Int32.self, forKey: .hr) ?? 0
-
+        
         self.constellation = try container.decodeIfPresent(String.self, forKey: .constellation)
         self.constellation_r = try container.decodeIfPresent(String.self, forKey: .constellation_r)
         self.description_r = try container.decodeIfPresent(String.self, forKey: .description_r)
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
         self.name_r = try container.decodeIfPresent(String.self, forKey: .name_r)
         self.sign = try container.decodeIfPresent(String.self, forKey: .sign)
+        self.img = try container.decodeIfPresent(String.self, forKey: .img)
         
         self.hours = try container.decodeIfPresent(Double.self, forKey: .hours) ?? 0
         self.minutes = try container.decodeIfPresent(Double.self, forKey: .minutes) ?? 0

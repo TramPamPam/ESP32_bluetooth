@@ -13,6 +13,19 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="Constellation" representedClassName="Constellation" syncable="YES">
+        <attribute name="abbreviation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name_r" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Star" inverseName="aConstellation" inverseEntity="Star" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Star" representedClassName="Star" syncable="YES">
         <attribute name="constellation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="constellation_r" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,6 +37,7 @@
         <attribute name="hours" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="hr" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="min" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="minutes" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -32,6 +46,7 @@
         <attribute name="seconds" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sign" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vmag" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="aConstellation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Constellation" inverseName="stars" inverseEntity="Constellation" syncable="YES"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -40,6 +55,7 @@
     </entity>
     <elements>
         <element name="Article" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="Star" positionX="-63" positionY="27" width="128" height="315"/>
+        <element name="Star" positionX="-63" positionY="27" width="128" height="345"/>
+        <element name="Constellation" positionX="-63" positionY="135" width="128" height="135"/>
     </elements>
 </model>
