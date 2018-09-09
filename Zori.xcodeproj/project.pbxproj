@@ -16,6 +16,11 @@
 		949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */; };
 		949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E9C207D11C1009E8C0C /* ZoriTests.swift */; };
 		A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A514539E2111D3FA009D1673 /* FullArticleViewController.swift */; };
+		A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600223214565390012D619 /* Constellation+CoreDataClass.swift */; };
+		A5600226214565390012D619 /* Constellation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */; };
+		A5600229214567160012D619 /* ConstellationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600228214567160012D619 /* ConstellationAPI.swift */; };
+		A560022B214568B40012D619 /* ConstellationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560022A214568B40012D619 /* ConstellationService.swift */; };
+		A560022D2145694B0012D619 /* ConstellationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560022C2145694B0012D619 /* ConstellationsListViewController.swift */; };
 		A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */; };
 		A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */; };
 		A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2521119D970023C482 /* CoreDataStack.swift */; };
@@ -70,6 +75,11 @@
 		949E3E9C207D11C1009E8C0C /* ZoriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriTests.swift; sourceTree = "<group>"; };
 		949E3E9E207D11C1009E8C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A514539E2111D3FA009D1673 /* FullArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
+		A5600223214565390012D619 /* Constellation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5600228214567160012D619 /* ConstellationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationAPI.swift; sourceTree = "<group>"; };
+		A560022A214568B40012D619 /* ConstellationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationService.swift; sourceTree = "<group>"; };
+		A560022C2145694B0012D619 /* ConstellationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationsListViewController.swift; sourceTree = "<group>"; };
 		A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5727F2521119D970023C482 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -152,6 +162,7 @@
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
 				A588B34321453408005207DC /* Articles */,
 				A588B3442145343E005207DC /* Stars */,
+				A5600227214566FC0012D619 /* Constellations */,
 				949E3E86207D11BB009E8C0C /* ViewController.swift */,
 				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
 				A5727F1C21119CF70023C482 /* CoreData */,
@@ -186,6 +197,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A5600227214566FC0012D619 /* Constellations */ = {
+			isa = PBXGroup;
+			children = (
+				A5600228214567160012D619 /* ConstellationAPI.swift */,
+				A560022A214568B40012D619 /* ConstellationService.swift */,
+				A560022C2145694B0012D619 /* ConstellationsListViewController.swift */,
+			);
+			path = Constellations;
+			sourceTree = "<group>";
+		};
 		A5727F1C21119CF70023C482 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +221,8 @@
 		A5727F2721119E0E0023C482 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A5600223214565390012D619 /* Constellation+CoreDataClass.swift */,
+				A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */,
 				A588B33921451CB2005207DC /* Star+CoreDataClass.swift */,
 				A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */,
 				A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */,
@@ -448,15 +471,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
+				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
+				A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */,
 				A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */,
 				A5FA0CA52140343A0094E32B /* Converter.swift in Sources */,
 				A5727F372111AF390023C482 /* CustomMoyaProvider.swift in Sources */,
+				A560022D2145694B0012D619 /* ConstellationsListViewController.swift in Sources */,
 				949E3E87207D11BB009E8C0C /* ViewController.swift in Sources */,
 				949E3E85207D11BB009E8C0C /* AppDelegate.swift in Sources */,
 				A5727F302111A6A60023C482 /* ArticleAPI.swift in Sources */,
+				A5600226214565390012D619 /* Constellation+CoreDataProperties.swift in Sources */,
 				A588B34221452E2A005207DC /* StarListViewController.swift in Sources */,
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
@@ -468,6 +495,7 @@
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */,
 				A588B3402145208B005207DC /* StarService.swift in Sources */,
+				A5600229214567160012D619 /* ConstellationAPI.swift in Sources */,
 				A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */,
 				A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */,
 				A5727F2921119E320023C482 /* MergePolicy.swift in Sources */,

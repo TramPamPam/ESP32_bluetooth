@@ -8,7 +8,9 @@
 		<true/>
 	</dict>
 	<key>APP_SERVER</key>
-	<string>http://zori.uw-t.com/</string>
+	<string>http://star.3339333.xyz/</string>
+	<key>APP_SERVER_NEWS</key>
+	<string>http://zori.uw-t.com/ </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
