@@ -35,6 +35,8 @@
 		A588B33E21452076005207DC /* StarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33D21452076005207DC /* StarTests.swift */; };
 		A588B3402145208B005207DC /* StarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33F2145208B005207DC /* StarService.swift */; };
 		A588B34221452E2A005207DC /* StarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34121452E2A005207DC /* StarListViewController.swift */; };
+		A588B34621453535005207DC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34521453535005207DC /* StarViewController.swift */; };
+		A588B34821454306005207DC /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34721454306005207DC /* Angle.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
@@ -87,6 +89,8 @@
 		A588B33D21452076005207DC /* StarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTests.swift; sourceTree = "<group>"; };
 		A588B33F2145208B005207DC /* StarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarService.swift; sourceTree = "<group>"; };
 		A588B34121452E2A005207DC /* StarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarListViewController.swift; sourceTree = "<group>"; };
+		A588B34521453535005207DC /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
+		A588B34721454306005207DC /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +150,8 @@
 			children = (
 				949E3E93207D11C1009E8C0C /* Info.plist */,
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
-				A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */,
+				A588B34321453408005207DC /* Articles */,
+				A588B3442145343E005207DC /* Stars */,
 				949E3E86207D11BB009E8C0C /* ViewController.swift */,
 				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
 				A5727F1C21119CF70023C482 /* CoreData */,
@@ -154,8 +159,6 @@
 				949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */,
 				949E3E88207D11BB009E8C0C /* Main.storyboard */,
 				A5727F2C2111A66C0023C482 /* Services */,
-				A514539E2111D3FA009D1673 /* FullArticleViewController.swift */,
-				A588B34121452E2A005207DC /* StarListViewController.swift */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -208,11 +211,8 @@
 		A5727F2C2111A66C0023C482 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A5727F2D2111A68C0023C482 /* ArticleService.swift */,
-				A5727F2F2111A6A60023C482 /* ArticleAPI.swift */,
-				A5FA0CA22140326B0094E32B /* ZoriAPI.swift */,
 				A5FA0CA42140343A0094E32B /* Converter.swift */,
-				A588B33F2145208B005207DC /* StarService.swift */,
+				A588B34721454306005207DC /* Angle.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -227,6 +227,28 @@
 				A5727F3E2111CBC50023C482 /* CustomAlert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A588B34321453408005207DC /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				A5727F2D2111A68C0023C482 /* ArticleService.swift */,
+				A5727F2F2111A6A60023C482 /* ArticleAPI.swift */,
+				A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */,
+				A514539E2111D3FA009D1673 /* FullArticleViewController.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		A588B3442145343E005207DC /* Stars */ = {
+			isa = PBXGroup;
+			children = (
+				A5FA0CA22140326B0094E32B /* ZoriAPI.swift */,
+				A588B33F2145208B005207DC /* StarService.swift */,
+				A588B34121452E2A005207DC /* StarListViewController.swift */,
+				A588B34521453535005207DC /* StarViewController.swift */,
+			);
+			path = Stars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,8 +460,10 @@
 				A588B34221452E2A005207DC /* StarListViewController.swift in Sources */,
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
+				A588B34821454306005207DC /* Angle.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
 				A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */,
+				A588B34621453535005207DC /* StarViewController.swift in Sources */,
 				A5727F2E2111A68C0023C482 /* ArticleService.swift in Sources */,
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */,
