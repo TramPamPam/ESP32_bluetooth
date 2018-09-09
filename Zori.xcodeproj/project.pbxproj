@@ -30,6 +30,11 @@
 		A5727F3B2111B54A0023C482 /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3A2111B54A0023C482 /* ArticleTests.swift */; };
 		A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */; };
 		A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3E2111CBC50023C482 /* CustomAlert.swift */; };
+		A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33921451CB2005207DC /* Star+CoreDataClass.swift */; };
+		A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */; };
+		A588B33E21452076005207DC /* StarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33D21452076005207DC /* StarTests.swift */; };
+		A588B3402145208B005207DC /* StarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33F2145208B005207DC /* StarService.swift */; };
+		A588B34221452E2A005207DC /* StarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34121452E2A005207DC /* StarListViewController.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
@@ -77,6 +82,11 @@
 		A5727F3A2111B54A0023C482 /* ArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
 		A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		A5727F3E2111CBC50023C482 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		A588B33921451CB2005207DC /* Star+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Star+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Star+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A588B33D21452076005207DC /* StarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTests.swift; sourceTree = "<group>"; };
+		A588B33F2145208B005207DC /* StarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarService.swift; sourceTree = "<group>"; };
+		A588B34121452E2A005207DC /* StarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarListViewController.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +155,7 @@
 				949E3E88207D11BB009E8C0C /* Main.storyboard */,
 				A5727F2C2111A66C0023C482 /* Services */,
 				A514539E2111D3FA009D1673 /* FullArticleViewController.swift */,
+				A588B34121452E2A005207DC /* StarListViewController.swift */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 				949E3E9E207D11C1009E8C0C /* Info.plist */,
 				A5727F382111B3040023C482 /* CoreDataStackMock.swift */,
 				A5727F3A2111B54A0023C482 /* ArticleTests.swift */,
+				A588B33D21452076005207DC /* StarTests.swift */,
 			);
 			path = ZoriTests;
 			sourceTree = "<group>";
@@ -185,6 +197,8 @@
 		A5727F2721119E0E0023C482 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A588B33921451CB2005207DC /* Star+CoreDataClass.swift */,
+				A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */,
 				A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */,
 				A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */,
 			);
@@ -198,6 +212,7 @@
 				A5727F2F2111A6A60023C482 /* ArticleAPI.swift */,
 				A5FA0CA22140326B0094E32B /* ZoriAPI.swift */,
 				A5FA0CA42140343A0094E32B /* Converter.swift */,
+				A588B33F2145208B005207DC /* StarService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -410,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
@@ -419,6 +435,7 @@
 				949E3E87207D11BB009E8C0C /* ViewController.swift in Sources */,
 				949E3E85207D11BB009E8C0C /* AppDelegate.swift in Sources */,
 				A5727F302111A6A60023C482 /* ArticleAPI.swift in Sources */,
+				A588B34221452E2A005207DC /* StarListViewController.swift in Sources */,
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
@@ -426,6 +443,8 @@
 				A5727F2E2111A68C0023C482 /* ArticleService.swift in Sources */,
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */,
+				A588B3402145208B005207DC /* StarService.swift in Sources */,
+				A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */,
 				A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */,
 				A5727F2921119E320023C482 /* MergePolicy.swift in Sources */,
 			);
@@ -438,6 +457,7 @@
 				949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */,
 				A5727F392111B3040023C482 /* CoreDataStackMock.swift in Sources */,
 				A5727F3B2111B54A0023C482 /* ArticleTests.swift in Sources */,
+				A588B33E21452076005207DC /* StarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +614,10 @@
 				DEVELOPMENT_TEAM = DJNZKXGF8V;
 				INFOPLIST_FILE = Zori/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -611,7 +634,10 @@
 				DEVELOPMENT_TEAM = DJNZKXGF8V;
 				INFOPLIST_FILE = Zori/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -628,7 +654,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJNZKXGF8V;
 				INFOPLIST_FILE = ZoriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -646,7 +676,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJNZKXGF8V;
 				INFOPLIST_FILE = ZoriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
