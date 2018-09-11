@@ -13,15 +13,22 @@ import PromiseKit
 class ConstellationsListViewController: UIViewController, Alertable {
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var headerImageView: UIImageView!
     
     private var cons: [Constellation] = []
     
     let service: ConstellationService = ConstellationServiceImplementation(api: MoyaProvider<ConstellationAPI>())
-    
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "header"))
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 64
+        tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +45,14 @@ class ConstellationsListViewController: UIViewController, Alertable {
         if let starDetails = segue.destination as? StarViewController, let starSection = tableView.indexPathForSelectedRow?.section, let starRow = tableView.indexPathForSelectedRow?.row {
             starDetails.star = cons[starSection].stars?.allObjects[starRow] as! Star
         }
+    }
+}
+
+extension ConstellationsListViewController: UITableViewDelegate {}
+
+extension ConstellationsListViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
     }
 }
 
