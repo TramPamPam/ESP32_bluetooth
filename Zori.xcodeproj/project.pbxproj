@@ -16,6 +16,7 @@
 		949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */; };
 		949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E9C207D11C1009E8C0C /* ZoriTests.swift */; };
 		A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A514539E2111D3FA009D1673 /* FullArticleViewController.swift */; };
+		A55CDB6021496F4300C774E0 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CDB5F21496F4300C774E0 /* BLE.swift */; };
 		A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600223214565390012D619 /* Constellation+CoreDataClass.swift */; };
 		A5600226214565390012D619 /* Constellation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */; };
 		A5600229214567160012D619 /* ConstellationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600228214567160012D619 /* ConstellationAPI.swift */; };
@@ -75,6 +76,7 @@
 		949E3E9C207D11C1009E8C0C /* ZoriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriTests.swift; sourceTree = "<group>"; };
 		949E3E9E207D11C1009E8C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A514539E2111D3FA009D1673 /* FullArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
+		A55CDB5F21496F4300C774E0 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
 		A5600223214565390012D619 /* Constellation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5600228214567160012D619 /* ConstellationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationAPI.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */,
 				949E3E88207D11BB009E8C0C /* Main.storyboard */,
 				A5727F2C2111A66C0023C482 /* Services */,
+				A55CDB5F21496F4300C774E0 /* BLE.swift */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -381,7 +384,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
@@ -400,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1E18AE0A30791B7829196271 /* [CP] Embed Pods Frameworks */ = {
@@ -409,7 +412,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
@@ -428,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD5BB34E39694964B0469418 /* [CP] Check Pods Manifest.lock */ = {
@@ -499,6 +502,7 @@
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */,
 				A588B3402145208B005207DC /* StarService.swift in Sources */,
+				A55CDB6021496F4300C774E0 /* BLE.swift in Sources */,
 				A5600229214567160012D619 /* ConstellationAPI.swift in Sources */,
 				A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */,
 				A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */,

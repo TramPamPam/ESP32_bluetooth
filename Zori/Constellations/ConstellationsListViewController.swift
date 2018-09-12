@@ -64,6 +64,11 @@ extension ConstellationsListViewController: UITableViewDataSource {
         let constellation = cons[section]
         cell?.textLabel?.text = constellation.name_r
         cell?.detailTextLabel?.text = constellation.name
+        
+        if let str = constellation.img, let url = URL(string: str) {
+            cell?.imageView?.sd_setImage(with: url)
+        }
+        
         return cell
     }
     
