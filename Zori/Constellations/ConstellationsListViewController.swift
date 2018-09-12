@@ -9,6 +9,7 @@
 import UIKit
 import Moya
 import PromiseKit
+import SDWebImage
 
 class ConstellationsListViewController: UIViewController, Alertable {
 
@@ -57,6 +58,19 @@ extension ConstellationsListViewController: UIScrollViewDelegate {
 }
 
 extension ConstellationsListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        //HeaderCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
+        let constellation = cons[section]
+        cell?.textLabel?.text = constellation.name_r
+        cell?.detailTextLabel?.text = constellation.name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 64.0
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return cons.count
     }
@@ -66,13 +80,14 @@ extension ConstellationsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "StarCell", for: indexPath)
         let constellation = cons[indexPath.section]
         let star = (constellation.stars?.allObjects as! [Star])[indexPath.row]
         cell.textLabel?.text = star.name_r
         cell.detailTextLabel?.text = star.description_r
-        
+        let randNumber = String(arc4random_uniform(5)+1)
+        let randomPlaceholder = "star_"+randNumber
+        cell.imageView?.image = UIImage(named: randomPlaceholder)
         return cell
     }
     
