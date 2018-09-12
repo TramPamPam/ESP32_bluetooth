@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 class StarViewController: UIViewController, Alertable {
     var star: Star!
@@ -16,8 +18,13 @@ class StarViewController: UIViewController, Alertable {
     @IBOutlet private weak var pointButton: UIButton!
     @IBOutlet private weak var infoTableView: UITableView!
     
+    @IBOutlet private weak var starImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
 
         self.title = star.name_r
         infoTextView.text = star.description_r
@@ -40,7 +47,8 @@ class StarViewController: UIViewController, Alertable {
         info.append(("GLAT", "\(star.gLAT)"))
         
         infoTableView.reloadData()
-        
+        guard let img =  star.img, let url = URL(string: img) else { return }
+        starImageView.sd_setImage(with: url)
     }
     
     override func viewDidAppear(_ animated: Bool) {
