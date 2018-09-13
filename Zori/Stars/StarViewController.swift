@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 
-
 class StarViewController: UIViewController, Alertable {
     var star: Star!
     var info: [(String, String?)] = []

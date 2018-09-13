@@ -100,22 +100,16 @@ extension BLEConnector: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .unknown:
-//            statusLabel.text = "central.state is .unknown"
             onStatusChanged?("central.state is .unknown")
         case .resetting:
-//            statusLabel.text = "central.state is .resetting"
             onStatusChanged?("central.state is .resetting")
         case .unsupported:
-//            statusLabel.text = "central.state is .unsupported"
             onStatusChanged?("central.state is .unsupported")
         case .unauthorized:
-//            statusLabel.text = "central.state is .unauthorized"
             onStatusChanged?("central.state is .unauthorized")
         case .poweredOff:
-//            statusLabel.text = "central.state is .poweredOff"
             onStatusChanged?("central.state is .poweredOff")
         case .poweredOn:
-//            statusLabel.text = "central.state is .poweredOn"
             onStatusChanged?("central.state is .poweredOn")
             centralManager.scanForPeripherals(withServices: nil)
         }
@@ -143,7 +137,6 @@ extension BLEConnector: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         onStatusChanged?("Failed to connect \(peripheral.name ?? "" )")
-//        serviceStatusLabel.text = "Failed to connect \(peripheral.name ?? "" )"
     }
 }
 
@@ -153,19 +146,15 @@ extension BLEConnector: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else {
             onStatusChanged?("No services for \(peripheral)")
-//            serviceStatusLabel.text = "No services for \(peripheral)"
             return
         }
-//        serviceStatusLabel.text = "Discovered \(services) for \(peripheral)"
         for service in services {
-//            print(service)
             peripheral.discoverCharacteristics(nil, for: service)
         }
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         guard let characteristics = service.characteristics else {
-//            serviceStatusLabel.text = "Discovered \(service) but no characteristics"
             onStatusChanged?("Discovered \(service) but no characteristics")
             return
         }
@@ -186,8 +175,6 @@ extension BLEConnector: CBPeripheralDelegate {
             }
         }
         onStatusChanged?("Discovered: readable \(canReadCharacteristics.count)\nwritable: \(canWriteCharacteristics.count)")
-
-//        serviceStatusLabel.text = "Discovered: readable \(canReadCharacteristics.count)\nwritable: \(canWriteCharacteristics.count)"
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
@@ -201,13 +188,11 @@ extension BLEConnector: CBPeripheralDelegate {
         }
         
         if let char = characteristic.value, char.count > 1  {
-            debugPrint(char[0])
-            
+            debugPrint(char[0])            
             let data = char.advanced(by: 1)
             if let string = String(data: data, encoding: .utf8) {
                 debugPrint(string)
                 onInputChanged?(string)
-//                inputLabel.text! = string
             }
             
             let int32: Int32 = data.withUnsafeBytes({ (point) -> Int32 in
@@ -216,8 +201,6 @@ extension BLEConnector: CBPeripheralDelegate {
             let value = Int(littleEndian: Int(int32))
             let fValue = Float(value)
             onInputChanged?(" AKA \(Float(fValue/200000)) | \(int32)")
-//                inputLabel.text?.append(" AKA \(Float(fValue/200000)) | \(int32)")
-            
         }
         
     }
