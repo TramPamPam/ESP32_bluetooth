@@ -27,7 +27,7 @@ class ConstellationsListViewController: UIViewController, Alertable {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
 
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 64
         tableView.delegate = self
     }

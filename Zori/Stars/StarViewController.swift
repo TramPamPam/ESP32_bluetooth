@@ -78,5 +78,4 @@ extension StarViewController: UITableViewDataSource {
         return cell
     }
     
-    
 }
