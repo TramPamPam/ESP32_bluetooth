@@ -9,7 +9,6 @@
 import UIKit
 import SDWebImage
 
-
 class StarViewController: UIViewController, Alertable {
     var star: Star!
     var info: [(String, String?)] = []
@@ -58,8 +57,9 @@ class StarViewController: UIViewController, Alertable {
 
     @IBAction private func pointAction(_ sender: UIButton) {
         let pair = Converter().point(to: star)
-        let res = "Azimuth \(pair.0.degrees)º\nAlitude: \(pair.1.degrees)º"
+        let res = "Azimuth \(pair.0.degrees)º\nAltitude: \(pair.1.degrees)º"
         showAlert(res)
+        BLEConnector.shared.send(azimuth: pair.0, decline: pair.1)
     }
     
     
@@ -77,6 +77,5 @@ extension StarViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = item.1
         return cell
     }
-    
     
 }

@@ -16,6 +16,7 @@
 		949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */; };
 		949E3E9D207D11C1009E8C0C /* ZoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E3E9C207D11C1009E8C0C /* ZoriTests.swift */; };
 		A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A514539E2111D3FA009D1673 /* FullArticleViewController.swift */; };
+		A55CDB6021496F4300C774E0 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CDB5F21496F4300C774E0 /* BLE.swift */; };
 		A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600223214565390012D619 /* Constellation+CoreDataClass.swift */; };
 		A5600226214565390012D619 /* Constellation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */; };
 		A5600229214567160012D619 /* ConstellationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600228214567160012D619 /* ConstellationAPI.swift */; };
@@ -42,6 +43,7 @@
 		A588B34221452E2A005207DC /* StarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34121452E2A005207DC /* StarListViewController.swift */; };
 		A588B34621453535005207DC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34521453535005207DC /* StarViewController.swift */; };
 		A588B34821454306005207DC /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34721454306005207DC /* Angle.swift */; };
+		A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8745622ACE478009D0ACF /* JoystickViewController.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
@@ -75,6 +77,7 @@
 		949E3E9C207D11C1009E8C0C /* ZoriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriTests.swift; sourceTree = "<group>"; };
 		949E3E9E207D11C1009E8C0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A514539E2111D3FA009D1673 /* FullArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
+		A55CDB5F21496F4300C774E0 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
 		A5600223214565390012D619 /* Constellation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5600224214565390012D619 /* Constellation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constellation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5600228214567160012D619 /* ConstellationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationAPI.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		A588B34121452E2A005207DC /* StarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarListViewController.swift; sourceTree = "<group>"; };
 		A588B34521453535005207DC /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		A588B34721454306005207DC /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		A5E8745622ACE478009D0ACF /* JoystickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickViewController.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		949E3E83207D11BB009E8C0C /* Zori */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8745522ACE42F009D0ACF /* Joystick */,
 				949E3E93207D11C1009E8C0C /* Info.plist */,
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
 				A588B34321453408005207DC /* Articles */,
@@ -170,6 +175,7 @@
 				949E3E90207D11C1009E8C0C /* LaunchScreen.storyboard */,
 				949E3E88207D11BB009E8C0C /* Main.storyboard */,
 				A5727F2C2111A66C0023C482 /* Services */,
+				A55CDB5F21496F4300C774E0 /* BLE.swift */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -274,6 +280,14 @@
 			path = Stars;
 			sourceTree = "<group>";
 		};
+		A5E8745522ACE42F009D0ACF /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8745622ACE478009D0ACF /* JoystickViewController.swift */,
+			);
+			path = Joystick;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,9 +342,11 @@
 				TargetAttributes = {
 					949E3E80207D11BB009E8C0C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					949E3E97207D11C1009E8C0C = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 949E3E80207D11BB009E8C0C;
 					};
 				};
@@ -383,6 +399,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -392,6 +409,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -411,6 +429,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -420,6 +439,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -477,6 +497,7 @@
 				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
 				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
+				A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
 				A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */,
@@ -499,6 +520,7 @@
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,
 				A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */,
 				A588B3402145208B005207DC /* StarService.swift in Sources */,
+				A55CDB6021496F4300C774E0 /* BLE.swift in Sources */,
 				A5600229214567160012D619 /* ConstellationAPI.swift in Sources */,
 				A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */,
 				A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */,
@@ -676,7 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -696,7 +718,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -717,7 +739,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zori.app/Zori";
 			};
@@ -739,7 +761,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.soultime.test.ZoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zori.app/Zori";
 			};
