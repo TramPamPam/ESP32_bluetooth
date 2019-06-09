@@ -43,6 +43,7 @@
 		A588B34221452E2A005207DC /* StarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34121452E2A005207DC /* StarListViewController.swift */; };
 		A588B34621453535005207DC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34521453535005207DC /* StarViewController.swift */; };
 		A588B34821454306005207DC /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34721454306005207DC /* Angle.swift */; };
+		A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8745622ACE478009D0ACF /* JoystickViewController.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
 		DA2F7DB7A1F7296C11070E2D /* Pods_Zori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB43FB242A70DA27A2F110F /* Pods_Zori.framework */; };
@@ -103,6 +104,7 @@
 		A588B34121452E2A005207DC /* StarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarListViewController.swift; sourceTree = "<group>"; };
 		A588B34521453535005207DC /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		A588B34721454306005207DC /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		A5E8745622ACE478009D0ACF /* JoystickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickViewController.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		ED16EC52F289D994A14E875A /* Pods-ZoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		949E3E83207D11BB009E8C0C /* Zori */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8745522ACE42F009D0ACF /* Joystick */,
 				949E3E93207D11C1009E8C0C /* Info.plist */,
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
 				A588B34321453408005207DC /* Articles */,
@@ -277,6 +280,14 @@
 			path = Stars;
 			sourceTree = "<group>";
 		};
+		A5E8745522ACE42F009D0ACF /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8745622ACE478009D0ACF /* JoystickViewController.swift */,
+			);
+			path = Joystick;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,8 +397,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -397,6 +409,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -405,7 +418,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1E18AE0A30791B7829196271 /* [CP] Embed Pods Frameworks */ = {
@@ -414,8 +427,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -425,6 +439,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -433,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD5BB34E39694964B0469418 /* [CP] Check Pods Manifest.lock */ = {
@@ -482,6 +497,7 @@
 				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
 				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
+				A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
 				A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */,
