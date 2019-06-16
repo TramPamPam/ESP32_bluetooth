@@ -112,6 +112,8 @@ extension BLEConnector: CBCentralManagerDelegate {
         case .poweredOn:
             onStatusChanged?("central.state is .poweredOn")
             centralManager.scanForPeripherals(withServices: nil)
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -194,10 +196,8 @@ extension BLEConnector: CBPeripheralDelegate {
                 debugPrint(string)
                 onInputChanged?(string)
             }
-            
-            let int32: Int32 = data.withUnsafeBytes({ (point) -> Int32 in
-                return point.pointee
-            })
+
+            let int32: Int32 = data.withUnsafeBytes { $0.load(as: Int32.self) }
             let value = Int(littleEndian: Int(int32))
             let fValue = Float(value)
             onInputChanged?(" AKA \(Float(fValue/200000)) | \(int32)")

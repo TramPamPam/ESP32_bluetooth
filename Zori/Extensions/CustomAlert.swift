@@ -58,7 +58,7 @@ extension Alertable {
         }
         //Prepare message for network error
         if let errorResponse = error as? MoyaError {
-            if let body = try? errorResponse.response?.mapJSON() as? [String: Any], let bodyMessage = (body?["error"] as? [String: Any])?["message"] as? String {
+            if let body = try? errorResponse.response?.mapJSON() as? [String: Any], let bodyMessage = (body["error"] as? [String: Any])?["message"] as? String {
                 message = bodyMessage
             }
             return

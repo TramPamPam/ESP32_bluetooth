@@ -1,32 +1,32 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.8.2)
   - JoystickView (1.0.0)
-  - Moya (10.0.2):
-    - Moya/Core (= 10.0.2)
-  - Moya/Core (10.0.2):
+  - Moya (13.0.0):
+    - Moya/Core (= 13.0.0)
+  - Moya/Core (13.0.0):
     - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - netfox (1.11.1)
-  - PromiseKit (6.4.0):
-    - PromiseKit/CorePromise (= 6.4.0)
-    - PromiseKit/Foundation (= 6.4.0)
-    - PromiseKit/UIKit (= 6.4.0)
-  - PromiseKit/CorePromise (6.4.0)
-  - PromiseKit/Foundation (6.4.0):
+    - Result (~> 4.1)
+  - netfox (1.15.0)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.4.0):
+  - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
-  - Result (3.2.4)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
+  - Result (4.1.0)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
 
 DEPENDENCIES:
   - JoystickView
-  - Moya (~> 10.0.0)
-  - netfox (~> 1.11.0)
-  - PromiseKit (~> 6.0)
-  - SDWebImage (~> 4.0)
+  - Moya
+  - netfox
+  - PromiseKit
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -39,14 +39,14 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   JoystickView: b8f1b5b20f1279aa417bdb3f95aeb42e2d8bb15d
-  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
-  netfox: 5230196df3ca093a9418e079eb6e8f3776f15d14
-  PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Moya: 161263550064ff8a4948e8ff63137fd72a876292
+  netfox: 6ddcca687ad0a58550054fea481cb487461b5e0c
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
 
-PODFILE CHECKSUM: b99ea7db133f2672bbe3f076adad966827f1257c
+PODFILE CHECKSUM: 4feaf2e84b0cf1c5b8a857d818a44d36f3d9e22d
 
 COCOAPODS: 1.6.0
