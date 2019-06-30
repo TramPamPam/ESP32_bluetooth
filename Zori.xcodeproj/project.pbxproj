@@ -48,6 +48,9 @@
 		A588B34221452E2A005207DC /* StarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34121452E2A005207DC /* StarListViewController.swift */; };
 		A588B34621453535005207DC /* StarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34521453535005207DC /* StarViewController.swift */; };
 		A588B34821454306005207DC /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B34721454306005207DC /* Angle.swift */; };
+		A5BB950222BF6F6C005351A2 /* CircleLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BB950022BF6F6C005351A2 /* CircleLoaderViewController.swift */; };
+		A5BB950522BF70C7005351A2 /* Loaders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BB950422BF70C7005351A2 /* Loaders.storyboard */; };
+		A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */; };
 		A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8745622ACE478009D0ACF /* JoystickViewController.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
@@ -111,6 +114,9 @@
 		A588B34121452E2A005207DC /* StarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarListViewController.swift; sourceTree = "<group>"; };
 		A588B34521453535005207DC /* StarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarViewController.swift; sourceTree = "<group>"; };
 		A588B34721454306005207DC /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		A5BB950022BF6F6C005351A2 /* CircleLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoaderViewController.swift; sourceTree = "<group>"; };
+		A5BB950422BF70C7005351A2 /* Loaders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loaders.storyboard; sourceTree = "<group>"; };
+		A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BLECommands+DataSource.swift"; sourceTree = "<group>"; };
 		A5E8745622ACE478009D0ACF /* JoystickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickViewController.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
@@ -170,9 +176,11 @@
 		949E3E83207D11BB009E8C0C /* Zori */ = {
 			isa = PBXGroup;
 			children = (
+				A5BB94FD22BF6F1D005351A2 /* Circle Loader */,
 				949E3E93207D11C1009E8C0C /* Info.plist */,
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
 				A55CDB5F21496F4300C774E0 /* BLE.swift */,
+				A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */,
 				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
 				A53D7B7922B627AE00C5D144 /* Buttons.xcassets */,
 				A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */,
@@ -300,6 +308,15 @@
 			path = Stars;
 			sourceTree = "<group>";
 		};
+		A5BB94FD22BF6F1D005351A2 /* Circle Loader */ = {
+			isa = PBXGroup;
+			children = (
+				A5BB950022BF6F6C005351A2 /* CircleLoaderViewController.swift */,
+				A5BB950422BF70C7005351A2 /* Loaders.storyboard */,
+			);
+			path = "Circle Loader";
+			sourceTree = "<group>";
+		};
 		A5E8745522ACE42F009D0ACF /* Joystick */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +420,7 @@
 				949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */,
 				A51CEB9B22ACFB6500EC2D85 /* Colors.xcassets in Resources */,
 				949E3E8F207D11C1009E8C0C /* Assets.xcassets in Resources */,
+				A5BB950522BF70C7005351A2 /* Loaders.storyboard in Resources */,
 				A53D7B7A22B627AE00C5D144 /* Buttons.xcassets in Resources */,
 				949E3E8A207D11BB009E8C0C /* Main.storyboard in Resources */,
 				A53D7B7822B6257400C5D144 /* Settings.storyboard in Resources */,
@@ -535,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
+				A5BB950222BF6F6C005351A2 /* CircleLoaderViewController.swift in Sources */,
 				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
 				A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */,
@@ -553,6 +572,7 @@
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
 				A588B34821454306005207DC /* Angle.swift in Sources */,
+				A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
 				A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */,
 				A588B34621453535005207DC /* StarViewController.swift in Sources */,

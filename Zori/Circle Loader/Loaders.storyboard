@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJZ-g8-55Z">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Circle Loader View Controller-->
+        <scene sceneID="bG7-SJ-tGu">
+            <objects>
+                <viewController storyboardIdentifier="CircleLoaderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJZ-g8-55Z" customClass="CircleLoaderViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SCq-gL-hAi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdI-iN-wxr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fsB-qZ-tCE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zdI-iN-wxr" secondAttribute="trailing" id="Bsw-en-OKa"/>
+                            <constraint firstItem="zdI-iN-wxr" firstAttribute="leading" secondItem="SCq-gL-hAi" secondAttribute="leading" id="f8n-cY-VdK"/>
+                            <constraint firstAttribute="bottom" secondItem="zdI-iN-wxr" secondAttribute="bottom" id="oCk-ou-2xj"/>
+                            <constraint firstItem="zdI-iN-wxr" firstAttribute="top" secondItem="SCq-gL-hAi" secondAttribute="top" id="p0C-Qt-0XH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0jY-Y4-GzX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ar-NT-aoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="138"/>
+        </scene>
+    </scenes>
+</document>
