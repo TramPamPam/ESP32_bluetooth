@@ -13,7 +13,7 @@ let serviceCBUUID = CBUUID(string: "2b5e100a-2e9e-11e8-b467-0ed5f89f718b")
 let espInCharacteristicCBUUID = CBUUID(string: "6e3e4a02-2e9e-11e8-b467-0ed5f89f718b") //in
 let espOutCharacteristicCBUUID = CBUUID(string: "72c31af8-2e9e-11e8-b467-0ed5f89f718b") //out
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Alertable {
     @IBOutlet weak var inputLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var serviceStatusLabel: UILabel!
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     let infoSource = BLEDataSource()
     let central = BLEConnector.shared
+    let status = BLEConnector.shared.humanState()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
 
         infoTableView?.dataSource = infoSource
         infoTableView?.reloadData()
+        infoTableView?.delegate = self
     }
     
     @IBAction private func refreshTapped(_ sender: UIButton) {
@@ -99,5 +101,45 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            handleProps(ZoriProperties.values[indexPath.row])
+        case 1:
+            handleCommand(ZoriCommands.values[indexPath.row])
+        default:
+            break
+        }
+    }
 
+    func handleProps(_ property: ZoriProperties) {
+        showAlert("\(property.toString())")
+        central.send(property.rawValue)
+    }
+
+    func handleCommand(_ command: ZoriCommands) {
+        switch command {
+        case .startCalibration,.stopCalibration:
+            central.send(command.rawValue)
+            showAlert("\(command.toString())")
+
+        case .setAz, .setDec:
+            showDoubleTextFieldAlert("Enter coordinates:") { (az, dec) in
+                guard let azAngle = Double(az) else {
+                    debugPrint("NO AZ ANGLE")
+                    return
+                }
+                guard let decAngle = Double(dec) else {
+                    debugPrint("NO dec ANGLE")
+                    return
+                }
+
+                self.central.send(azimuth: Angle(degrees: azAngle), decline: Angle(degrees: decAngle))
+            }
+        @unknown default:
+            break
+        }
+    }
+}
 

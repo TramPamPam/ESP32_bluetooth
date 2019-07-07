@@ -23,12 +23,36 @@ class BLEConnector: NSObject, Alertable {
     var onInputChanged: ((String) -> Void)?
     
     static let shared = BLEConnector()
-    
+
+    func humanState() -> String {
+        switch centralManager.state {
+        case .unknown:
+            return "unknown"
+        case .resetting:
+            return "resetting ..."
+        case .unsupported:
+            return "unsupported :|"
+        case .unauthorized:
+            return "unauthorized ><"
+        case .poweredOff:
+            return "OFF"
+        case .poweredOn:
+            return "ON"
+        @unknown default:
+            return "WTF"
+        }
+    }
+
     func refresh() {
-        centralManager = CBCentralManager(delegate: self, queue: nil)
-        
-        centralManager.stopScan()
-        centralManager.scanForPeripherals(withServices: [serviceCBUUID])
+//        debugPrint(centralManager)
+        guard centralManager.state == .poweredOn else {
+            showAlert("Not powered on but \(humanState())")
+            return
+        }
+//        centralManager = CBCentralManager(delegate: self, queue: nil)
+
+//        centralManager.stopScan()
+//        centralManager.scanForPeripherals(withServices: [serviceCBUUID])
     }
     
     func send(_ int: Int32) {
@@ -98,41 +122,38 @@ class BLEConnector: NSObject, Alertable {
 
 extension BLEConnector: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        switch central.state {
-        case .unknown:
-            onStatusChanged?("central.state is .unknown")
-        case .resetting:
-            onStatusChanged?("central.state is .resetting")
-        case .unsupported:
-            onStatusChanged?("central.state is .unsupported")
-        case .unauthorized:
-            onStatusChanged?("central.state is .unauthorized")
-        case .poweredOff:
-            onStatusChanged?("central.state is .poweredOff")
+        switch centralManager.state {
         case .poweredOn:
-            onStatusChanged?("central.state is .poweredOn")
-            centralManager.scanForPeripherals(withServices: nil)
-        @unknown default:
-            fatalError()
+            onStatusChanged?("central.state is \(humanState())")
+            centralManager.scanForPeripherals(withServices: [serviceCBUUID])
+        default:
+            onStatusChanged?("central state is \(humanState())")
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,
                         advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print(peripheral)
+//        print(peripheral)
         guard peripheral.name == "Zori" else { return }
         
         debugPrint("Discovered! \(peripheral.name ?? "Unknown")")
         
         self.peripheral = peripheral
         self.peripheral.delegate = self
+        guard centralManager.state == .poweredOn else {
+            showAlert("NOT CONNECTED `cause \(humanState())")
+            return
+        }
         centralManager.stopScan()
         centralManager.connect(self.peripheral)
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        guard peripheral.name == "Zori" else { return }
+
         debugPrint(" Connected! \(peripheral.name ?? "Unknown")")
+
+        guard peripheral.name == "Zori" else { return }
+
         onStatusChanged?(" Connected! \(peripheral.name ?? "Unknown")")
         self.peripheral.discoverServices([serviceCBUUID])
     }

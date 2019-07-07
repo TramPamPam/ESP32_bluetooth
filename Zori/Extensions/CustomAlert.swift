@@ -22,10 +22,50 @@ extension UIViewController {
 
 protocol Alertable: class {
     func showAlert(_ alert: String)
+    func showAlert(_ alert: String, completion: @escaping ((String?) -> Void))
+    func showDoubleTextFieldAlert(_ alert: String, completion: @escaping ((String, String) -> Void))
     func showError(_ error: Error)
 }
 
 extension Alertable {
+    func showDoubleTextFieldAlert(_ alert: String, completion: @escaping ((String, String) -> Void)) {
+        let alertController = UIAlertController(title: "", message: alert, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completion(alertController.textFields?[0].text ?? "", alertController.textFields?[1].text ?? "")
+            alertController.dismiss(animated: false, completion: nil)
+        }))
+        alertController.addTextField { (tf) in
+            tf.placeholder = "Azimuth: Must be a number"
+        }
+        alertController.addTextField { (tf) in
+            tf.placeholder = "Decline: Must be a number"
+        }
+
+        if self is UIViewController {
+            (self as? UIViewController)?.present(alertController, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.windows.first?.rootViewController?.resignFirstResponder()
+            UIApplication.shared.windows.first?.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+    }
+
+    func showAlert(_ alert: String, completion: @escaping ((String?) -> Void)) {
+        let alertController = UIAlertController(title: "", message: alert, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completion(alertController.textFields?[0].text)
+            alertController.dismiss(animated: false, completion: nil)
+        }))
+        alertController.addTextField { (tf) in
+            tf.placeholder = "Must be a number"
+        }
+        if self is UIViewController {
+            (self as? UIViewController)?.present(alertController, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.windows.first?.rootViewController?.resignFirstResponder()
+            UIApplication.shared.windows.first?.rootViewController?.present(alertController, animated: true, completion: nil)
+        }
+    }
+
     func showAlert(_ alert: String) {
         let alertController = UIAlertController(title: "", message: alert, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in

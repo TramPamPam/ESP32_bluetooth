@@ -24,6 +24,16 @@ enum ZoriProperties: Int32 {
     case getAz = 0x40
     case getDec = 0x41
 
+    static var values: [ZoriProperties] {
+        return [
+        .getSerial,
+        .getFirmwareVersion,
+        .getHardwareVersion,
+        .getAz,
+        .getDec
+        ]
+    }
+
     static func stringValues() -> [String] {
         var res: [String] = []
         res.append(ZoriProperties.getSerial.toString())
@@ -48,6 +58,25 @@ enum ZoriProperties: Int32 {
             return "get current decline - 0x41"
         }
     }
+
+    static func from(string: String) -> ZoriProperties? {
+
+        switch string {
+        case  "get serial - 0x10":
+            return .getSerial
+        case "get firmware version - 0x11":
+            return .getFirmwareVersion
+        case "get hardware version - 0x12":
+            return .getHardwareVersion
+        case "get current azimuth - 0x40":
+            return .getAz
+        case "get current decline - 0x41":
+            return .getDec
+        default:
+            return nil
+        }
+
+    }
 }
 
 /**
@@ -61,6 +90,15 @@ enum ZoriCommands: Int32 {
     case stopCalibration = 0x3000
     case setAz = 0x20
     case setDec = 0x21
+
+    static var values: [ZoriCommands] {
+        return [
+        .startCalibration,
+        .stopCalibration,
+        .setAz,
+        .setDec
+        ]
+    }
 
     static func stringValues() -> [String] {
         var res: [String] = []
