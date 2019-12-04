@@ -20,6 +20,7 @@ PODS:
   - SDWebImage (5.0.1):
     - SDWebImage/Core (= 5.0.1)
   - SDWebImage/Core (5.0.1)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - JoystickView
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - netfox
   - PromiseKit
   - SDWebImage
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -37,6 +39,7 @@ SPEC REPOS:
     - PromiseKit
     - Result
     - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -46,7 +49,8 @@ SPEC CHECKSUMS:
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 4feaf2e84b0cf1c5b8a857d818a44d36f3d9e22d
+PODFILE CHECKSUM: 44f3635e404f3bddfbea9b28df502bdb09e57121
 
 COCOAPODS: 1.6.0

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreBluetooth
+import SVProgressHUD
 
 let serviceCBUUID = CBUUID(string: "2b5e100a-2e9e-11e8-b467-0ed5f89f718b")
 let espInCharacteristicCBUUID = CBUUID(string: "6e3e4a02-2e9e-11e8-b467-0ed5f89f718b") //in
@@ -41,6 +42,8 @@ class ViewController: UIViewController, Alertable {
         infoTableView?.reloadData()
         infoTableView?.delegate = self
     }
+
+    // MARK: - IBActions
     
     @IBAction private func refreshTapped(_ sender: UIButton) {
         central.refresh()
@@ -56,11 +59,12 @@ class ViewController: UIViewController, Alertable {
 //    0x40/0x41 - получить текущий азимут/наклон
 //    0x20/0x21 - установить азимут/наклон в градусах
 //    calibrate - 0x3001 (start) - 12289, 0x3000 - 12288 (stop)
-    //    
+    // MARK: Send
     @IBAction func sendTapped(_ sender: UIButton) {
         central.send(Int32(sender.tag))
     }
 
+    // MARK: Calibrate
     @IBAction func calibrateTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
         sender.isSelected ? central.calibrate() : central.stopCalibrate()
@@ -101,6 +105,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
@@ -114,7 +119,7 @@ extension ViewController: UITableViewDelegate {
     }
 
     func handleProps(_ property: ZoriProperties) {
-        showAlert("\(property.toString())")
+        SVProgressHUD.show(withStatus: "Sending \(property.toString())")
         central.send(property.rawValue)
     }
 
@@ -122,7 +127,7 @@ extension ViewController: UITableViewDelegate {
         switch command {
         case .startCalibration,.stopCalibration:
             central.send(command.rawValue)
-            showAlert("\(command.toString())")
+            SVProgressHUD.show(withStatus: "Sending \(command.toString())")
 
         case .setAz, .setDec:
             showDoubleTextFieldAlert("Enter coordinates:") { (az, dec) in

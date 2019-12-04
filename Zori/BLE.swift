@@ -7,6 +7,7 @@
 //
 
 import CoreBluetooth
+import SVProgressHUD
 
 class BLEConnector: NSObject, Alertable {
     lazy var centralManager: CBCentralManager! = {
@@ -35,29 +36,34 @@ class BLEConnector: NSObject, Alertable {
         case .unauthorized:
             return "unauthorized ><"
         case .poweredOff:
-            return "OFF"
+            return "POWER: OFF"
         case .poweredOn:
-            return "ON"
+            return "POWER: ON"
         @unknown default:
             return "WTF"
         }
     }
 
     func refresh() {
+        canWriteCharacteristics = []
+        canReadCharacteristics = []
 //        debugPrint(centralManager)
+        SVProgressHUD.show(withStatus: "refresh")
         guard centralManager.state == .poweredOn else {
-            showAlert("Not powered on but \(humanState())")
+            debugPrint("REFRESH FAILED \(humanState())")
+//            showAlert("Not powered on but \(humanState())")
+            SVProgressHUD.showError(withStatus: "FAILED")
             return
         }
-//        centralManager = CBCentralManager(delegate: self, queue: nil)
 
-//        centralManager.stopScan()
-//        centralManager.scanForPeripherals(withServices: [serviceCBUUID])
+        centralManager.stopScan()
+        centralManager.scanForPeripherals(withServices: nil)
+        SVProgressHUD.show(withStatus: "scan")
     }
     
     func send(_ int: Int32) {
         let data = Data(toByteArray(int))
-        debugPrint(toByteArray(int))
+        debugPrint("sent", toByteArray(int))
         canWriteCharacteristics.forEach {
             peripheral.writeValue(data, for: $0, type: CBCharacteristicWriteType.withResponse)
         }
@@ -120,20 +126,28 @@ class BLEConnector: NSObject, Alertable {
     }
 }
 
+// MARK: - CBCentralManagerDelegate
 extension BLEConnector: CBCentralManagerDelegate {
+    // MARK: update state
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch centralManager.state {
         case .poweredOn:
             onStatusChanged?("central.state is \(humanState())")
-            centralManager.scanForPeripherals(withServices: [serviceCBUUID])
+//            centralManager.scanForPeripherals(withServices: [serviceCBUUID])
         default:
             onStatusChanged?("central state is \(humanState())")
         }
     }
-    
+    // MARK: discover peripheral
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,
                         advertisementData: [String : Any], rssi RSSI: NSNumber) {
-//        print(peripheral)
+        SVProgressHUD.dismiss()
+
+        guard peripheral.name != nil else { return }
+        print(peripheral)
+
+        debugPrint("Discovered? \(peripheral.name ?? "Unknown")")
+
         guard peripheral.name == "Zori" else { return }
         
         debugPrint("Discovered! \(peripheral.name ?? "Unknown")")
@@ -147,7 +161,8 @@ extension BLEConnector: CBCentralManagerDelegate {
         centralManager.stopScan()
         centralManager.connect(self.peripheral)
     }
-    
+
+    // MARK: connect peripheral
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
 
         debugPrint(" Connected! \(peripheral.name ?? "Unknown")")
@@ -166,6 +181,7 @@ extension BLEConnector: CBCentralManagerDelegate {
 // MARK: - CBPeripheralDelegate
 
 extension BLEConnector: CBPeripheralDelegate {
+
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         guard let services = peripheral.services else {
             onStatusChanged?("No services for \(peripheral)")
@@ -210,19 +226,25 @@ extension BLEConnector: CBPeripheralDelegate {
             print("Unhandled Characteristic UUID: \(characteristic.uuid)")
         }
         
-        if let char = characteristic.value, char.count > 1  {
-            debugPrint(char[0])            
-            let data = char.advanced(by: 1)
-            if let string = String(data: data, encoding: .utf8) {
-                debugPrint(string)
-                onInputChanged?(string)
-            }
-
-            let int32: Int32 = data.withUnsafeBytes { $0.load(as: Int32.self) }
-            let value = Int(littleEndian: Int(int32))
-            let fValue = Float(value)
-            onInputChanged?(" AKA \(Float(fValue/200000)) | \(int32)")
+        guard let char = characteristic.value, char.count > 1  else {
+            SVProgressHUD.showSuccess(withStatus: "Ëmpty response")
+            return
         }
+
+        debugPrint(char[0])
+        let data = char.advanced(by: 1)
+        if let string = String(data: data, encoding: .utf8) {
+            SVProgressHUD.showSuccess(withStatus: string)
+            onInputChanged?(string)
+            return
+        }
+
+        let int32: Int32 = data.withUnsafeBytes { $0.load(as: Int32.self) }
+        let value = Int(littleEndian: Int(int32))
+        let fValue = Float(value)
+        onInputChanged?(" AKA \(Float(fValue/200000)) | \(int32)")
+        SVProgressHUD.showSuccess(withStatus: "\(fValue)")
+
         
     }
     

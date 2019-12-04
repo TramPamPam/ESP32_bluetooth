@@ -8,6 +8,7 @@ def shared_pods
   pod 'netfox'
   pod 'SDWebImage'
   pod "JoystickView"
+  pod 'SVProgressHUD'
 end
 
 target 'Zori' do

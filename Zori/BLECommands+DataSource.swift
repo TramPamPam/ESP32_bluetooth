@@ -86,8 +86,8 @@ enum ZoriProperties: Int32 {
  - calibrate - 0x3000 - 12288 (stop)
  */
 enum ZoriCommands: Int32 {
-    case startCalibration = 0x3001
-    case stopCalibration = 0x3000
+    case startCalibration = 0x0130
+    case stopCalibration = 0x0030
     case setAz = 0x20
     case setDec = 0x21
 
@@ -112,9 +112,9 @@ enum ZoriCommands: Int32 {
     func toString() -> String {
         switch self {
         case .startCalibration:
-            return "calibrate - 0x3001 (start)"
+            return "calibrate - \(rawValue) (start)"
         case .stopCalibration:
-            return "calibrate - 0x3000"
+            return "calibrate - \(rawValue) (stop)"
         case .setAz:
             return "0x20 установить азимут в градусах"
         case .setDec:

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bi3-Di-o3K">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bi3-Di-o3K">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -366,8 +364,8 @@
                                             <action selector="switchChanged:" destination="Bi3-Di-o3K" eventType="valueChanged" id="eCE-sg-SLa"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DisConnect - 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-m5-kmf">
-                                        <rect key="frame" x="81" y="83.5" width="114.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="switch connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-m5-kmf">
+                                        <rect key="frame" x="81" y="83.5" width="217" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -386,9 +384,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAv-ca-oc1">
-                                        <rect key="frame" x="251" y="71.5" width="147" height="44"/>
+                                        <rect key="frame" x="298" y="71.5" width="100" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="147" id="MiQ-Px-7kb"/>
+                                            <constraint firstAttribute="width" constant="100" id="MiQ-Px-7kb"/>
                                             <constraint firstAttribute="height" constant="44" id="dWp-DM-btH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -460,7 +458,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BleInfoCell" textLabel="juC-ue-0bK" style="IBUITableViewCellStyleDefault" id="DTB-y3-34d">
-                                                <rect key="frame" x="0.0" y="28" width="398" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="398" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DTB-y3-34d" id="LZ2-3J-Oxv">
                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
@@ -490,13 +488,13 @@
                                     <constraint firstItem="z5e-J1-Rra" firstAttribute="bottom" secondItem="4fV-gi-Udw" secondAttribute="bottom" constant="20" id="DQr-Gb-fnx"/>
                                     <constraint firstItem="N5T-8b-vlu" firstAttribute="trailing" secondItem="MAv-ca-oc1" secondAttribute="trailing" id="Eem-0G-zQC"/>
                                     <constraint firstItem="N5T-8b-vlu" firstAttribute="leading" secondItem="5YU-zt-sTE" secondAttribute="leading" id="JHr-F4-Sct"/>
+                                    <constraint firstItem="MAv-ca-oc1" firstAttribute="leading" secondItem="1uK-m5-kmf" secondAttribute="trailing" id="Ldv-yo-3IP"/>
                                     <constraint firstItem="z5e-J1-Rra" firstAttribute="trailing" secondItem="MAv-ca-oc1" secondAttribute="trailing" constant="16" id="OZl-fK-vfb"/>
                                     <constraint firstItem="1uK-m5-kmf" firstAttribute="centerY" secondItem="5YU-zt-sTE" secondAttribute="centerY" id="PlF-34-TpB"/>
                                     <constraint firstItem="5YU-zt-sTE" firstAttribute="leading" secondItem="z5e-J1-Rra" secondAttribute="leading" constant="16" id="RQL-BE-fTR"/>
                                     <constraint firstItem="MAv-ca-oc1" firstAttribute="top" secondItem="z5e-J1-Rra" secondAttribute="top" constant="27.5" id="VDe-Mt-YT2"/>
                                     <constraint firstItem="0AZ-Eh-imU" firstAttribute="top" secondItem="N5T-8b-vlu" secondAttribute="bottom" constant="8" id="eB9-if-7wq"/>
                                     <constraint firstItem="0AZ-Eh-imU" firstAttribute="leading" secondItem="z5e-J1-Rra" secondAttribute="leading" constant="8" id="nEW-cs-z73"/>
-                                    <constraint firstItem="z5e-J1-Rra" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1uK-m5-kmf" secondAttribute="trailing" constant="23" id="oD1-V0-zQh"/>
                                     <constraint firstItem="N5T-8b-vlu" firstAttribute="top" secondItem="MAv-ca-oc1" secondAttribute="bottom" constant="8" id="wBs-9u-T1i"/>
                                     <constraint firstItem="z5e-J1-Rra" firstAttribute="trailing" secondItem="0AZ-Eh-imU" secondAttribute="trailing" constant="8" id="ySO-PB-X20"/>
                                 </constraints>
@@ -515,8 +513,9 @@
                     <connections>
                         <outlet property="connectionSwitch" destination="5YU-zt-sTE" id="cdZ-Iw-weM"/>
                         <outlet property="infoTableView" destination="0AZ-Eh-imU" id="25e-7J-vPq"/>
+                        <outlet property="inputLabel" destination="KeO-aw-4E7" id="FKc-mg-3yG"/>
                         <outlet property="serviceStatusLabel" destination="rzs-eW-Pa9" id="vyq-S4-dO8"/>
-                        <outlet property="statusLabel" destination="KeO-aw-4E7" id="bJy-R9-98T"/>
+                        <outlet property="statusLabel" destination="1uK-m5-kmf" id="xK2-YB-nTx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLP-v2-aNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
