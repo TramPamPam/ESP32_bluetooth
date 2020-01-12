@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         _ = CoreDataStackImplementation.shared
         NFX.sharedInstance().start()
+        _ = BLEConnector.shared.centralManager
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             BLEConnector.shared.refresh()
         }

@@ -5,15 +5,27 @@
 //  Created by Oleksandr on 9/12/18.
 //  Copyright © 2018 ekreative. All rights reserved.
 //
-
+import Foundation
 import CoreBluetooth
 import SVProgressHUD
+
+let serviceCBUUID = CBUUID(string: "2b5e100a-2e9e-11e8-b467-0ed5f89f718b")
+let espInCharacteristicCBUUID = CBUUID(string: "6e3e4a02-2e9e-11e8-b467-0ed5f89f718b") //in
+let espOutCharacteristicCBUUID = CBUUID(string: "72c31af8-2e9e-11e8-b467-0ed5f89f718b") //out
+
+struct CurrentInfo {
+    var serial: String?
+    var firmwareVersion: String?
+    var hardwareVersion: String?
+    var az: Float?
+    var dec: Float?
+}
 
 class BLEConnector: NSObject, Alertable {
     lazy var centralManager: CBCentralManager! = {
         return CBCentralManager(delegate: self, queue: nil)
     }()
-    
+
     var peripheral: CBPeripheral!
     var characteristics: [CBCharacteristic] = []
     var canWriteCharacteristics: [CBCharacteristic] = []
@@ -24,6 +36,8 @@ class BLEConnector: NSObject, Alertable {
     var onInputChanged: ((String) -> Void)?
     
     static let shared = BLEConnector()
+
+    var current = CurrentInfo()
 
     func humanState() -> String {
         switch centralManager.state {
@@ -47,11 +61,11 @@ class BLEConnector: NSObject, Alertable {
     func refresh() {
         canWriteCharacteristics = []
         canReadCharacteristics = []
-//        debugPrint(centralManager)
+        //        debugPrint(centralManager)
         SVProgressHUD.show(withStatus: "refresh")
         guard centralManager.state == .poweredOn else {
             debugPrint("REFRESH FAILED \(humanState())")
-//            showAlert("Not powered on but \(humanState())")
+            //            showAlert("Not powered on but \(humanState())")
             SVProgressHUD.showError(withStatus: "FAILED")
             return
         }
@@ -86,7 +100,7 @@ class BLEConnector: NSObject, Alertable {
     }
     
     func send(azimuth: Angle, decline: Angle) {
-//        set current azimuth/decline - 0x20/0x21 (32/33)
+        //        set current azimuth/decline - 0x20/0x21 (32/33)
         debugPrint(azimuth.degrees)
         debugPrint(decline.degrees)
         
@@ -133,7 +147,7 @@ extension BLEConnector: CBCentralManagerDelegate {
         switch centralManager.state {
         case .poweredOn:
             onStatusChanged?("central.state is \(humanState())")
-//            centralManager.scanForPeripherals(withServices: [serviceCBUUID])
+        //            centralManager.scanForPeripherals(withServices: [serviceCBUUID])
         default:
             onStatusChanged?("central state is \(humanState())")
         }
@@ -188,10 +202,19 @@ extension BLEConnector: CBPeripheralDelegate {
             return
         }
         for service in services {
+            debugPrint(service.uuid)
             peripheral.discoverCharacteristics(nil, for: service)
         }
     }
-    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverIncludedServicesFor service: CBService, error: Error?) {
+        guard let services = peripheral.services else {
+            onStatusChanged?("No services for \(peripheral)")
+            return
+        }
+        for service in services {
+            peripheral.discoverCharacteristics(nil, for: service)
+        }
+    }
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         guard let characteristics = service.characteristics else {
             onStatusChanged?("Discovered \(service) but no characteristics")
@@ -236,6 +259,7 @@ extension BLEConnector: CBPeripheralDelegate {
         if let string = String(data: data, encoding: .utf8) {
             SVProgressHUD.showSuccess(withStatus: string)
             onInputChanged?(string)
+            save(string: string)
             return
         }
 
@@ -243,6 +267,7 @@ extension BLEConnector: CBPeripheralDelegate {
         let value = Int(littleEndian: Int(int32))
         let fValue = Float(value)
         onInputChanged?(" AKA \(Float(fValue/200000)) | \(int32)")
+        save(float: Float(fValue/200000))
         SVProgressHUD.showSuccess(withStatus: "\(fValue)")
 
         
@@ -250,5 +275,42 @@ extension BLEConnector: CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
     }
-    
+
+
+    func save(string: String) {
+        guard let latestRaw = UserDefaults.standard.value(forKey: "latest") as? Int32, let property = ZoriProperties(rawValue: latestRaw) else {
+            return
+        }
+
+        switch property {
+        case .getSerial:
+            current.serial = string
+            UserDefaults.standard.removeObject(forKey: "latest")
+        case .getFirmwareVersion:
+            current.firmwareVersion = string
+            UserDefaults.standard.removeObject(forKey: "latest")
+        case .getHardwareVersion:
+            current.hardwareVersion = string
+            UserDefaults.standard.removeObject(forKey: "latest")
+        default:
+            break
+        }
+        
+
+    }
+
+    func save(float: Float) {
+        guard let latestRaw = UserDefaults.standard.value(forKey: "latest") as? Int32, let property = ZoriProperties(rawValue: latestRaw) else { return }
+        switch property {
+        case .getAz:
+            current.az = float
+            UserDefaults.standard.removeObject(forKey: "latest")
+        case .getDec:
+            current.dec = float
+            UserDefaults.standard.removeObject(forKey: "latest")
+        default:
+            break
+        }
+
+    }
 }

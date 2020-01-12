@@ -19,6 +19,7 @@
 		A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A514539E2111D3FA009D1673 /* FullArticleViewController.swift */; };
 		A51CEB9B22ACFB6500EC2D85 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */; };
 		A51CEB9E22ACFF1800EC2D85 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB9D22ACFF1800EC2D85 /* RoundedButton.swift */; };
+		A53248DD23CB693B00C30AEC /* CurrentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */; };
 		A53D7B7822B6257400C5D144 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D7B7722B6257400C5D144 /* Settings.storyboard */; };
 		A53D7B7A22B627AE00C5D144 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53D7B7922B627AE00C5D144 /* Buttons.xcassets */; };
 		A55CDB6021496F4300C774E0 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55CDB5F21496F4300C774E0 /* BLE.swift */; };
@@ -27,6 +28,7 @@
 		A5600229214567160012D619 /* ConstellationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5600228214567160012D619 /* ConstellationAPI.swift */; };
 		A560022B214568B40012D619 /* ConstellationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560022A214568B40012D619 /* ConstellationService.swift */; };
 		A560022D2145694B0012D619 /* ConstellationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560022C2145694B0012D619 /* ConstellationsListViewController.swift */; };
+		A56FB28523CB19E700BF2208 /* Joystick.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56FB28423CB19E700BF2208 /* Joystick.storyboard */; };
 		A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */; };
 		A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */; };
 		A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F2521119D970023C482 /* CoreDataStack.swift */; };
@@ -52,6 +54,8 @@
 		A5BB950522BF70C7005351A2 /* Loaders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BB950422BF70C7005351A2 /* Loaders.storyboard */; };
 		A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */; };
 		A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8745622ACE478009D0ACF /* JoystickViewController.swift */; };
+		A5EE7B8E23CB61C000783AFC /* ZoriCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE7B8D23CB61C000783AFC /* ZoriCommands.swift */; };
+		A5EE7B9023CB61E500783AFC /* ZoriProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE7B8F23CB61E500783AFC /* ZoriProperties.swift */; };
 		A5FA0CA32140326B0094E32B /* ZoriAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA22140326B0094E32B /* ZoriAPI.swift */; };
 		A5FA0CA52140343A0094E32B /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA0CA42140343A0094E32B /* Converter.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +89,7 @@
 		A514539E2111D3FA009D1673 /* FullArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A51CEB9D22ACFF1800EC2D85 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStatusViewController.swift; sourceTree = "<group>"; };
 		A53D7B7722B6257400C5D144 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A53D7B7922B627AE00C5D144 /* Buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Buttons.xcassets; sourceTree = "<group>"; };
 		A55CDB5F21496F4300C774E0 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		A5600228214567160012D619 /* ConstellationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationAPI.swift; sourceTree = "<group>"; };
 		A560022A214568B40012D619 /* ConstellationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationService.swift; sourceTree = "<group>"; };
 		A560022C2145694B0012D619 /* ConstellationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstellationsListViewController.swift; sourceTree = "<group>"; };
+		A56FB28423CB19E700BF2208 /* Joystick.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Joystick.storyboard; sourceTree = "<group>"; };
 		A5727F1F21119D150023C482 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5727F2021119D150023C482 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5727F2521119D970023C482 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 		A5BB950422BF70C7005351A2 /* Loaders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loaders.storyboard; sourceTree = "<group>"; };
 		A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BLECommands+DataSource.swift"; sourceTree = "<group>"; };
 		A5E8745622ACE478009D0ACF /* JoystickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickViewController.swift; sourceTree = "<group>"; };
+		A5EE7B8D23CB61C000783AFC /* ZoriCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriCommands.swift; sourceTree = "<group>"; };
+		A5EE7B8F23CB61E500783AFC /* ZoriProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriProperties.swift; sourceTree = "<group>"; };
 		A5FA0CA22140326B0094E32B /* ZoriAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoriAPI.swift; sourceTree = "<group>"; };
 		A5FA0CA42140343A0094E32B /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		A679AB9C28BCC08ED8BBC635 /* Pods-Zori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zori.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zori/Pods-Zori.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,8 +187,7 @@
 				A5BB94FD22BF6F1D005351A2 /* Circle Loader */,
 				949E3E93207D11C1009E8C0C /* Info.plist */,
 				949E3E84207D11BB009E8C0C /* AppDelegate.swift */,
-				A55CDB5F21496F4300C774E0 /* BLE.swift */,
-				A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */,
+				A5EE7B8C23CB61A800783AFC /* Bluetooth */,
 				949E3E8E207D11C1009E8C0C /* Assets.xcassets */,
 				A53D7B7922B627AE00C5D144 /* Buttons.xcassets */,
 				A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */,
@@ -226,6 +233,7 @@
 			children = (
 				949E3E86207D11BB009E8C0C /* ViewController.swift */,
 				A53D7B7722B6257400C5D144 /* Settings.storyboard */,
+				A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */,
 			);
 			path = "Device settings";
 			sourceTree = "<group>";
@@ -321,8 +329,20 @@
 			isa = PBXGroup;
 			children = (
 				A5E8745622ACE478009D0ACF /* JoystickViewController.swift */,
+				A56FB28423CB19E700BF2208 /* Joystick.storyboard */,
 			);
 			path = Joystick;
+			sourceTree = "<group>";
+		};
+		A5EE7B8C23CB61A800783AFC /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				A55CDB5F21496F4300C774E0 /* BLE.swift */,
+				A5CBC7C622C8A480004018FF /* BLECommands+DataSource.swift */,
+				A5EE7B8D23CB61C000783AFC /* ZoriCommands.swift */,
+				A5EE7B8F23CB61E500783AFC /* ZoriProperties.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +439,7 @@
 			files = (
 				949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */,
 				A51CEB9B22ACFB6500EC2D85 /* Colors.xcassets in Resources */,
+				A56FB28523CB19E700BF2208 /* Joystick.storyboard in Resources */,
 				949E3E8F207D11C1009E8C0C /* Assets.xcassets in Resources */,
 				A5BB950522BF70C7005351A2 /* Loaders.storyboard in Resources */,
 				A53D7B7A22B627AE00C5D144 /* Buttons.xcassets in Resources */,
@@ -558,11 +579,13 @@
 			files = (
 				A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */,
 				A5BB950222BF6F6C005351A2 /* CircleLoaderViewController.swift in Sources */,
+				A5EE7B8E23CB61C000783AFC /* ZoriCommands.swift in Sources */,
 				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
 				A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
+				A53248DD23CB693B00C30AEC /* CurrentStatusViewController.swift in Sources */,
 				A5600225214565390012D619 /* Constellation+CoreDataClass.swift in Sources */,
 				A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */,
 				A5FA0CA52140343A0094E32B /* Converter.swift in Sources */,
@@ -579,6 +602,7 @@
 				A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
 				A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */,
+				A5EE7B9023CB61E500783AFC /* ZoriProperties.swift in Sources */,
 				A588B34621453535005207DC /* StarViewController.swift in Sources */,
 				A5727F2E2111A68C0023C482 /* ArticleService.swift in Sources */,
 				A5727F332111A8890023C482 /* CustomTargetType.swift in Sources */,

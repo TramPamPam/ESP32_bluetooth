@@ -11,17 +11,17 @@ import JoystickView
 
 class JoystickViewController: UIViewController {
 
-    @IBOutlet weak var joystickBackImageView: UIImageView!
+    @IBOutlet private weak var joystickBackImageView: UIImageView!
+    @IBOutlet private weak var joystickView: JoystickView!
+    @IBOutlet private weak var joystickThumbView: UIView!
 
-    @IBOutlet weak var joystickView: JoystickView!
+    @IBOutlet private weak var indicatorXLabel: UILabel!
+    @IBOutlet private weak var indicatorYLabel: UILabel!
+    @IBOutlet private weak var directionLabel: UILabel!
 
-    @IBOutlet weak var joystickThumbView: UIView!
+    @IBOutlet private weak var latestCommandLabel: UILabel!
 
-
-    @IBOutlet weak var indicatorXLabel: UILabel!
-    @IBOutlet weak var indicatorYLabel: UILabel!
-    @IBOutlet weak var directionLabel: UILabel!
-
+    var item = DispatchWorkItem() {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +32,17 @@ class JoystickViewController: UIViewController {
 
         joystickView.delegate = self
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
 }
 
 extension JoystickViewController: JoystickViewDelegate {
-
-
-
     func joystickView(_ joystickView: JoystickView, didMoveto x: Float, y: Float, direction: JoystickMoveDriection) {
-        indicatorXLabel.text = "\(x)"
-        indicatorYLabel.text = "\(y)"
+        indicatorXLabel.text = "\((x * 100).rounded())"
+        indicatorYLabel.text = "\((y * 100).rounded())"
         var directionHuman: String
         switch direction {
         case .none:
@@ -57,12 +59,17 @@ extension JoystickViewController: JoystickViewDelegate {
             directionHuman = "diagonal"
         }
         directionLabel.text = directionHuman
+        guard x != 0 && y != 0 else { return }
+        item.cancel()
+        item = DispatchWorkItem() { [weak self, x = x, y = y] in
+            self?.latestCommandLabel.text = "Latest command:\nMoving x: \((x * 100).rounded()) y: \((y * 100).rounded())"
+//            debugPrint("Moving x: \((x * 100).rounded()) y: \((y * 100).rounded())")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: item)
     }
 
     func joystickViewDidEndMoving(_ joystickView: JoystickView) {
-
         directionLabel.text = "Stopped"
-
     }
 }
 

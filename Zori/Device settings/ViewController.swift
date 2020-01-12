@@ -6,13 +6,11 @@
 //  Copyright © 2018 ekreative. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import CoreBluetooth
 import SVProgressHUD
 
-let serviceCBUUID = CBUUID(string: "2b5e100a-2e9e-11e8-b467-0ed5f89f718b")
-let espInCharacteristicCBUUID = CBUUID(string: "6e3e4a02-2e9e-11e8-b467-0ed5f89f718b") //in
-let espOutCharacteristicCBUUID = CBUUID(string: "72c31af8-2e9e-11e8-b467-0ed5f89f718b") //out
 
 class ViewController: UIViewController, Alertable {
     @IBOutlet weak var inputLabel: UILabel!
@@ -119,11 +117,15 @@ extension ViewController: UITableViewDelegate {
     }
 
     func handleProps(_ property: ZoriProperties) {
+        UserDefaults.standard.set(property.rawValue, forKey: "latest")
+
         SVProgressHUD.show(withStatus: "Sending \(property.toString())")
         central.send(property.rawValue)
     }
 
     func handleCommand(_ command: ZoriCommands) {
+        UserDefaults.standard.set(command.rawValue, forKey: "latest")
+
         switch command {
         case .startCalibration,.stopCalibration:
             central.send(command.rawValue)

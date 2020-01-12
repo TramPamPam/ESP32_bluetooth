@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bi3-Di-o3K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gL-vM-RNg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +34,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C1-Ue-WzH">
-                                        <rect key="frame" x="113" y="790" width="188" height="52"/>
+                                        <rect key="frame" x="19" y="790" width="376" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="DML-ne-8gc"/>
                                         </constraints>
@@ -346,6 +346,26 @@
             </objects>
             <point key="canvasLocation" x="-603" y="37"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bit-Sg-NqO">
+            <objects>
+                <navigationController id="1gL-vM-RNg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mFQ-Bm-rm2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="ZoriPurple"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bi3-Di-o3K" kind="relationship" relationship="rootViewController" id="muK-xB-xGd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ExI-rq-Bum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="82"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="qh0-Ym-8Pk">
             <objects>
@@ -358,20 +378,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5YU-zt-sTE">
-                                        <rect key="frame" x="16" y="78" width="51" height="31"/>
+                                        <rect key="frame" x="16" y="122" width="51" height="31"/>
                                         <color key="tintColor" name="ZoriCyan"/>
                                         <connections>
                                             <action selector="switchChanged:" destination="Bi3-Di-o3K" eventType="valueChanged" id="eCE-sg-SLa"/>
                                         </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="switch connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uK-m5-kmf">
-                                        <rect key="frame" x="81" y="83.5" width="217" height="20"/>
+                                        <rect key="frame" x="81" y="127.5" width="217" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fV-gi-Udw">
-                                        <rect key="frame" x="113" y="790" width="188" height="52"/>
+                                        <rect key="frame" x="19" y="790" width="376" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="ldF-EP-CBb"/>
                                         </constraints>
@@ -384,7 +404,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAv-ca-oc1">
-                                        <rect key="frame" x="298" y="71.5" width="100" height="44"/>
+                                        <rect key="frame" x="298" y="115.5" width="100" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="MiQ-Px-7kb"/>
                                             <constraint firstAttribute="height" constant="44" id="dWp-DM-btH"/>
@@ -398,7 +418,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N5T-8b-vlu" userLabel="Service Stack View">
-                                        <rect key="frame" x="16" y="123.5" width="382" height="108"/>
+                                        <rect key="frame" x="16" y="167.5" width="382" height="108"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jow-7p-3xU">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
@@ -454,7 +474,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0AZ-Eh-imU">
-                                        <rect key="frame" x="8" y="239.5" width="398" height="542.5"/>
+                                        <rect key="frame" x="8" y="283.5" width="398" height="498.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BleInfoCell" textLabel="juC-ue-0bK" style="IBUITableViewCellStyleDefault" id="DTB-y3-34d">
@@ -510,6 +530,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2bM-z3-qBe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2kj-wc-Xrb">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Joystick" image="chart.pie" catalog="system" id="QV5-T0-zId">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="nCH-Vq-rNP" kind="show" id="EDl-1V-vsM"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Planets" image="scope" catalog="system" id="a8r-zz-Skq">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="248-Zq-l6h" kind="show" id="P7E-CL-aoo"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Current" image="slider.horizontal.3" catalog="system" id="rHx-US-WMC">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="n9P-Yc-wJK" kind="presentation" id="JRQ-wG-N7f"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="connectionSwitch" destination="5YU-zt-sTE" id="cdZ-Iw-weM"/>
                         <outlet property="infoTableView" destination="0AZ-Eh-imU" id="25e-7J-vPq"/>
@@ -520,11 +562,218 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLP-v2-aNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="37"/>
+            <point key="canvasLocation" x="1012" y="82"/>
+        </scene>
+        <!--Joystick-->
+        <scene sceneID="9fG-JL-R2M">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Joystick" id="nCH-Vq-rNP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pij-pK-M2t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OU-bb-ke5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-183"/>
+        </scene>
+        <!--Current Status View Controller-->
+        <scene sceneID="Lfd-Bo-gTH">
+            <objects>
+                <viewController storyboardIdentifier="CurrentStatusViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n9P-Yc-wJK" customClass="CurrentStatusViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6AO-or-1fn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-qS-ORB">
+                                <rect key="frame" x="20" y="53" width="374" height="320"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0X-AH-NKH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-cr-5XB">
+                                                <rect key="frame" x="20" y="20" width="45.5" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-a8-4v7">
+                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Tnx-cr-5XB" firstAttribute="leading" secondItem="s0X-AH-NKH" secondAttribute="leading" constant="20" symbolic="YES" id="K63-df-Bbn"/>
+                                            <constraint firstAttribute="bottom" secondItem="FR7-a8-4v7" secondAttribute="bottom" id="Viu-Mq-InP"/>
+                                            <constraint firstAttribute="height" constant="64" id="cSG-aB-YuT"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tnx-cr-5XB" secondAttribute="bottom" constant="20" symbolic="YES" id="dPm-eC-T6r"/>
+                                            <constraint firstAttribute="trailing" secondItem="FR7-a8-4v7" secondAttribute="trailing" constant="20" symbolic="YES" id="dcc-l1-ZJ6"/>
+                                            <constraint firstItem="FR7-a8-4v7" firstAttribute="top" secondItem="s0X-AH-NKH" secondAttribute="top" id="hB3-um-Zzc"/>
+                                            <constraint firstItem="Tnx-cr-5XB" firstAttribute="top" secondItem="s0X-AH-NKH" secondAttribute="top" constant="20" symbolic="YES" id="q3c-cf-vjr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtK-WC-ipO">
+                                        <rect key="frame" x="0.0" y="64" width="374" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firmware" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mA-5i-Eab">
+                                                <rect key="frame" x="20" y="20" width="74.5" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzX-FD-65H">
+                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3mA-5i-Eab" firstAttribute="leading" secondItem="gtK-WC-ipO" secondAttribute="leading" constant="20" symbolic="YES" id="DZ8-Vm-1Fl"/>
+                                            <constraint firstAttribute="height" constant="64" id="NcE-vA-KOr"/>
+                                            <constraint firstItem="3mA-5i-Eab" firstAttribute="top" secondItem="gtK-WC-ipO" secondAttribute="top" constant="20" symbolic="YES" id="mfn-9X-odv"/>
+                                            <constraint firstAttribute="bottom" secondItem="3mA-5i-Eab" secondAttribute="bottom" constant="20" symbolic="YES" id="muI-Zf-hSt"/>
+                                            <constraint firstAttribute="bottom" secondItem="GzX-FD-65H" secondAttribute="bottom" id="xsl-eN-V07"/>
+                                            <constraint firstItem="GzX-FD-65H" firstAttribute="top" secondItem="gtK-WC-ipO" secondAttribute="top" id="xum-Z7-dPs"/>
+                                            <constraint firstAttribute="trailing" secondItem="GzX-FD-65H" secondAttribute="trailing" constant="20" symbolic="YES" id="zNt-Xf-XI2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vq-5M-R3I">
+                                        <rect key="frame" x="0.0" y="128" width="374" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hardware" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-2m-I1V">
+                                                <rect key="frame" x="20" y="20" width="78" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hr-vZ-4jy">
+                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="0Hr-vZ-4jy" firstAttribute="top" secondItem="5vq-5M-R3I" secondAttribute="top" id="4ub-JH-w9S"/>
+                                            <constraint firstItem="GhL-2m-I1V" firstAttribute="top" secondItem="5vq-5M-R3I" secondAttribute="top" constant="20" symbolic="YES" id="9A4-Bd-6jM"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Hr-vZ-4jy" secondAttribute="trailing" constant="20" symbolic="YES" id="RLY-6h-NDn"/>
+                                            <constraint firstItem="GhL-2m-I1V" firstAttribute="leading" secondItem="5vq-5M-R3I" secondAttribute="leading" constant="20" symbolic="YES" id="ZFS-Pu-cxo"/>
+                                            <constraint firstAttribute="bottom" secondItem="GhL-2m-I1V" secondAttribute="bottom" constant="20" symbolic="YES" id="m4C-qW-KSd"/>
+                                            <constraint firstAttribute="height" constant="64" id="vEw-aN-ZGc"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Hr-vZ-4jy" secondAttribute="bottom" id="wz0-yP-mCo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-YU-NGC">
+                                        <rect key="frame" x="0.0" y="192" width="374" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Azimuth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSi-pD-wCw">
+                                                <rect key="frame" x="20" y="20" width="66.5" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-JB-BHX">
+                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="r0b-JB-BHX" secondAttribute="bottom" id="4fj-b4-lqj"/>
+                                            <constraint firstAttribute="height" constant="64" id="5c5-AX-Pb5"/>
+                                            <constraint firstAttribute="trailing" secondItem="r0b-JB-BHX" secondAttribute="trailing" constant="20" symbolic="YES" id="an4-mG-osi"/>
+                                            <constraint firstItem="r0b-JB-BHX" firstAttribute="top" secondItem="0fa-YU-NGC" secondAttribute="top" id="mlp-oW-jvf"/>
+                                            <constraint firstAttribute="bottom" secondItem="MSi-pD-wCw" secondAttribute="bottom" constant="20" symbolic="YES" id="qK0-DZ-m47"/>
+                                            <constraint firstItem="MSi-pD-wCw" firstAttribute="top" secondItem="0fa-YU-NGC" secondAttribute="top" constant="20" symbolic="YES" id="qRF-U9-cLi"/>
+                                            <constraint firstItem="MSi-pD-wCw" firstAttribute="leading" secondItem="0fa-YU-NGC" secondAttribute="leading" constant="20" symbolic="YES" id="wWd-di-c29"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyn-84-YWO">
+                                        <rect key="frame" x="0.0" y="256" width="374" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wez-L9-Jv7">
+                                                <rect key="frame" x="20" y="20" width="59.5" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-4n-rvv">
+                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ZoriCyan"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="wez-L9-Jv7" firstAttribute="leading" secondItem="jyn-84-YWO" secondAttribute="leading" constant="20" symbolic="YES" id="7M6-j0-qSE"/>
+                                            <constraint firstItem="Tsz-4n-rvv" firstAttribute="top" secondItem="jyn-84-YWO" secondAttribute="top" id="NBo-HM-by8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tsz-4n-rvv" secondAttribute="bottom" id="SJp-TA-3pf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tsz-4n-rvv" secondAttribute="trailing" constant="20" symbolic="YES" id="XMs-is-2dK"/>
+                                            <constraint firstItem="wez-L9-Jv7" firstAttribute="top" secondItem="jyn-84-YWO" secondAttribute="top" constant="20" symbolic="YES" id="fJi-wi-rWQ"/>
+                                            <constraint firstAttribute="height" constant="64" id="qjN-2N-ESQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="wez-L9-Jv7" secondAttribute="bottom" constant="20" symbolic="YES" id="tc1-wk-gGd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-Pj-sIv">
+                                <rect key="frame" x="322" y="0.0" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="4kx-nC-qIo"/>
+                                    <constraint firstAttribute="height" constant="64" id="71g-1p-ct1"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeTapped:" destination="n9P-Yc-wJK" eventType="touchUpInside" id="s8X-Fu-2dL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="ZoriPurple"/>
+                        <constraints>
+                            <constraint firstItem="dIQ-AT-KM0" firstAttribute="trailing" secondItem="cGy-qS-ORB" secondAttribute="trailing" constant="20" id="cnk-KU-6jY"/>
+                            <constraint firstItem="cGy-qS-ORB" firstAttribute="top" secondItem="dIQ-AT-KM0" secondAttribute="top" constant="53" id="dy3-In-28m"/>
+                            <constraint firstItem="dIQ-AT-KM0" firstAttribute="trailing" secondItem="hyC-Pj-sIv" secondAttribute="trailing" constant="28" id="hpT-hu-onE"/>
+                            <constraint firstItem="cGy-qS-ORB" firstAttribute="leading" secondItem="dIQ-AT-KM0" secondAttribute="leading" constant="20" id="iqg-yV-YsX"/>
+                            <constraint firstItem="hyC-Pj-sIv" firstAttribute="top" secondItem="dIQ-AT-KM0" secondAttribute="top" id="lEN-Zw-bm6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dIQ-AT-KM0"/>
+                    </view>
+                    <connections>
+                        <outlet property="azLabel" destination="r0b-JB-BHX" id="I1P-Ic-fYv"/>
+                        <outlet property="decLabel" destination="Tsz-4n-rvv" id="e04-37-aok"/>
+                        <outlet property="firmwareLabel" destination="GzX-FD-65H" id="ewM-YV-H2v"/>
+                        <outlet property="hardwareLabel" destination="0Hr-vZ-4jy" id="mjX-nF-7bq"/>
+                        <outlet property="serialLabel" destination="FR7-a8-4v7" id="unJ-BJ-xMw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGJ-Iu-b4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="327"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Pge-Yb-cCc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="248-Zq-l6h" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="l6o-Wh-6SP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJy-cI-K9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1529" y="-183"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chart.pie" catalog="system" width="64" height="60"/>
         <image name="outline" width="148" height="46"/>
+        <image name="scope" catalog="system" width="64" height="60"/>
+        <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
         <image name="start" width="188" height="52"/>
         <image name="stop" width="188" height="52"/>
         <namedColor name="ZoriCyan">
