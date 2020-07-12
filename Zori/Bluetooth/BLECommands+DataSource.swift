@@ -8,16 +8,30 @@
 //
 import UIKit
 
+struct BleModel {
+    let title: String
+    let source: Services
+
+    init(service: Services) {
+        if let currentValue = service.value {
+            title = "\(service) : \(currentValue)"
+        } else {
+            title = "\(service) : NaN"
+        }
+        source = service
+    }
+}
+
 class BLEDataSource: NSObject, UITableViewDataSource {
-    let props = ZoriProperties.stringValues()
-    let commands = ZoriCommands.stringValues()
+    let props = Services.read.map { BleModel(service: $0) } // ZoriProperties.stringValues()
+    let commands = Services.write.map { BleModel(service: $0) } // ZoriCommands.stringValues()
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Available properties: "
+            return "Available properties (read): "
         default:
-            return "Available commands: "
+            return "Available commands (write): "
         }
     }
 
@@ -41,9 +55,9 @@ class BLEDataSource: NSObject, UITableViewDataSource {
         cell.textLabel?.textColor = .white
         switch indexPath.section {
         case 0:
-            cell.textLabel?.text = props[indexPath.row]
+            cell.textLabel?.text = props[indexPath.row].title
         default:
-            cell.textLabel?.text = commands[indexPath.row]
+            cell.textLabel?.text = commands[indexPath.row].title
         }
         return cell
     }

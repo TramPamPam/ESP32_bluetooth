@@ -29,9 +29,18 @@ class ViewController: UIViewController, Alertable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        central.onStatusChanged = { self.serviceStatusLabel.text = $0 }
-        central.onOutputChanged = { self.statusLabel.text = $0 }
-        central.onInputChanged = { self.inputLabel.text = $0 }
+        central.onStatusChanged = {
+            self.serviceStatusLabel.text = $0
+            self.infoTableView?.reloadData()
+        }
+        central.onOutputChanged = {
+            self.statusLabel.text = $0
+            self.infoTableView?.reloadData()
+        }
+        central.onInputChanged = {
+            self.inputLabel.text = $0
+            self.infoTableView?.reloadData()
+        }
         
         // Make the digits monospaces to avoid shifting when the numbers change
         inputLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: inputLabel.font!.pointSize, weight: .regular)
