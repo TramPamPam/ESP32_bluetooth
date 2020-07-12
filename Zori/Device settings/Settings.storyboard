@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gL-vM-RNg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gL-vM-RNg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -391,7 +391,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fV-gi-Udw">
-                                        <rect key="frame" x="19" y="790" width="376" height="52"/>
+                                        <rect key="frame" x="19" y="741" width="376" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="ldF-EP-CBb"/>
                                         </constraints>
@@ -474,7 +474,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0AZ-Eh-imU">
-                                        <rect key="frame" x="8" y="283.5" width="398" height="498.5"/>
+                                        <rect key="frame" x="8" y="283.5" width="398" height="449.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BleInfoCell" textLabel="juC-ue-0bK" style="IBUITableViewCellStyleDefault" id="DTB-y3-34d">
@@ -530,6 +530,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2bM-z3-qBe"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="2kj-wc-Xrb">
                         <rightBarButtonItems>
                             <barButtonItem title="Joystick" image="chart.pie" catalog="system" id="QV5-T0-zId">
@@ -550,8 +551,15 @@
                                     <segue destination="n9P-Yc-wJK" kind="presentation" id="JRQ-wG-N7f"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="By Name" image="magnifyingglass" catalog="system" id="pNo-Sd-J8s">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Pe9-dy-J1e" kind="presentation" id="gY0-Jg-Edf"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="connectionSwitch" destination="5YU-zt-sTE" id="cdZ-Iw-weM"/>
                         <outlet property="infoTableView" destination="0AZ-Eh-imU" id="25e-7J-vPq"/>
@@ -573,6 +581,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OU-bb-ke5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1762" y="-183"/>
+        </scene>
+        <!--Raw Data Table View Controller-->
+        <scene sceneID="7jK-Z5-oRj">
+            <objects>
+                <tableViewController storyboardIdentifier="RawDataTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe9-dy-J1e" customClass="RawDataTableViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Coj-nE-jg3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="by raw star name" id="gpY-eO-SeD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Pe9-dy-J1e" id="IPa-7T-rBf"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" textLabel="uDn-6R-Evc" detailTextLabel="c9L-e4-Xky" style="IBUITableViewCellStyleValue1" id="dX8-xH-CZ7">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dX8-xH-CZ7" id="Bxg-3G-l1L">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uDn-6R-Evc">
+                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c9L-e4-Xky">
+                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Pe9-dy-J1e" id="AkX-iP-lHr"/>
+                            <outlet property="delegate" destination="Pe9-dy-J1e" id="XX7-kv-K5v"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="gpY-eO-SeD" id="HvX-RZ-EdW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVo-ds-Got" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="327"/>
         </scene>
         <!--Current Status View Controller-->
         <scene sceneID="Lfd-Bo-gTH">
@@ -771,6 +834,7 @@
     </scenes>
     <resources>
         <image name="chart.pie" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="outline" width="148" height="46"/>
         <image name="scope" catalog="system" width="64" height="60"/>
         <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
