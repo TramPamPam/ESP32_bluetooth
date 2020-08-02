@@ -10,9 +10,9 @@ import UIKit
 
 struct BleModel {
     let title: String
-    let source: Services
+    let source: Property
 
-    init(service: Services) {
+    init(service: Property) {
         if let currentValue = service.value {
             title = "\(service) : \(currentValue)"
         } else {
@@ -23,8 +23,8 @@ struct BleModel {
 }
 
 class BLEDataSource: NSObject, UITableViewDataSource {
-    let props = Services.read.map { BleModel(service: $0) } // ZoriProperties.stringValues()
-    let commands = Services.write.map { BleModel(service: $0) } // ZoriCommands.stringValues()
+    let props = Property.read.map { BleModel(service: $0) } // ZoriProperties.stringValues()
+    let commands = Property.write.map { BleModel(service: $0) } // ZoriCommands.stringValues()
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {

@@ -22,12 +22,14 @@ class ViewController: UIViewController, Alertable {
 
     @IBOutlet weak var infoTableView: UITableView!
     
-    let infoSource = BLEDataSource()
+    let infoSource = DeviceDataSource() //BLEDataSource()
     let central = BLEConnector.shared
     let status = BLEConnector.shared.humanState()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: NSNotification.Name("update"), object: nil)
 
         central.onStatusChanged = {
             self.serviceStatusLabel.text = $0
@@ -48,6 +50,11 @@ class ViewController: UIViewController, Alertable {
         infoTableView?.dataSource = infoSource
         infoTableView?.reloadData()
         infoTableView?.delegate = self
+    }
+
+    @objc
+    func reloadTable() {
+        infoTableView.reloadData()
     }
 
     // MARK: - IBActions
