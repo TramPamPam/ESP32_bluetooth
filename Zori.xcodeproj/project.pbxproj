@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,7 @@
 		A5727F3B2111B54A0023C482 /* ArticleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3A2111B54A0023C482 /* ArticleTests.swift */; };
 		A5727F3D2111CAD40023C482 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */; };
 		A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5727F3E2111CBC50023C482 /* CustomAlert.swift */; };
+		A5829DB12504E26900FF7BD6 /* DeviceCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5829DB02504E26900FF7BD6 /* DeviceCommandViewController.swift */; };
 		A588B33B21451CB2005207DC /* Star+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33921451CB2005207DC /* Star+CoreDataClass.swift */; };
 		A588B33C21451CB2005207DC /* Star+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */; };
 		A588B33E21452076005207DC /* StarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A588B33D21452076005207DC /* StarTests.swift */; };
@@ -118,6 +119,7 @@
 		A5727F3A2111B54A0023C482 /* ArticleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTests.swift; sourceTree = "<group>"; };
 		A5727F3C2111CAD40023C482 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		A5727F3E2111CBC50023C482 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		A5829DB02504E26900FF7BD6 /* DeviceCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCommandViewController.swift; sourceTree = "<group>"; };
 		A588B33921451CB2005207DC /* Star+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Star+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A588B33A21451CB2005207DC /* Star+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Star+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A588B33D21452076005207DC /* StarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTests.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				A53D7B7722B6257400C5D144 /* Settings.storyboard */,
 				A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */,
 				A5FC158C23E6EE4B00952C44 /* RawDataTableViewController.swift */,
+				A5829DB02504E26900FF7BD6 /* DeviceCommandViewController.swift */,
 			);
 			path = "Device settings";
 			sourceTree = "<group>";
@@ -434,7 +437,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = ekreative;
+				ORGANIZATIONNAME = zori;
 				TargetAttributes = {
 					949E3E80207D11BB009E8C0C = {
 						CreatedOnToolsVersion = 9.3;
@@ -503,30 +506,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/netfox/netfox.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/netfox.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Zori/Pods-Zori-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -557,30 +541,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/JoystickView/JoystickView.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/netfox/netfox.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JoystickView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/netfox.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ZoriTests/Pods-ZoriTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -638,6 +603,7 @@
 				A5600226214565390012D619 /* Constellation+CoreDataProperties.swift in Sources */,
 				A588B34221452E2A005207DC /* StarListViewController.swift in Sources */,
 				A5727F2B2111A21E0023C482 /* CustomError.swift in Sources */,
+				A5829DB12504E26900FF7BD6 /* DeviceCommandViewController.swift in Sources */,
 				A5727F2421119D150023C482 /* Article+CoreDataProperties.swift in Sources */,
 				A588B34821454306005207DC /* Angle.swift in Sources */,
 				A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */,

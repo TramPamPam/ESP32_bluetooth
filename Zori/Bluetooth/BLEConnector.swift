@@ -61,6 +61,7 @@ class BLEConnector: NSObject, Alertable {
     func send(_ int: Int32) {
         let data = Data(toByteArray(int))
         debugPrint("sent", toByteArray(int))
+
 //        canWriteCharacteristics.forEach {
 //            peripheral.writeValue(data, for: $0, type: CBCharacteristicWriteType.withResponse)
 //        }
@@ -109,15 +110,16 @@ class BLEConnector: NSObject, Alertable {
 
     }
 
-    func  toByteArray<T>(_ value: T) -> [UInt8] {
-        var value = value
-        return withUnsafeBytes(of: &value) { Array($0) }
-    }
+}
 
-    func fromByteArray<T>(_ value: [UInt8], _: T.Type) -> T {
-        return value.withUnsafeBytes {
-            $0.baseAddress!.load(as: T.self)
-        }
+func  toByteArray<T>(_ value: T) -> [UInt8] {
+    var value = value
+    return withUnsafeBytes(of: &value) { Array($0) }
+}
+
+func fromByteArray<T>(_ value: [UInt8], _: T.Type) -> T {
+    return value.withUnsafeBytes {
+        $0.baseAddress!.load(as: T.self)
     }
 }
 

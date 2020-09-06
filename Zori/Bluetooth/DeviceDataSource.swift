@@ -38,7 +38,7 @@ class DeviceDataSource: NSObject, UITableViewDataSource {
             return cell
         }
 
-        cell.textLabel?.text = "Raw: \(rawValue)"
+//        cell.textLabel?.text = "Raw: \(rawValue)"
 
         if let property = Property(rawValue: rawValue) {
             cell.textLabel?.text = "Property: \(String(describing: property.value))"

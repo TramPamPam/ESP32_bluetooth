@@ -31,7 +31,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - JoystickView
     - Moya
@@ -53,4 +53,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 44f3635e404f3bddfbea9b28df502bdb09e57121
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.9.1
