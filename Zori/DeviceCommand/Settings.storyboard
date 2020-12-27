@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gL-vM-RNg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1gL-vM-RNg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                                             <action selector="calibrateTapped:" destination="Lxg-WP-c5u" eventType="touchUpInside" id="YrN-Pd-0bS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-xf-qry">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-xf-qry">
                                         <rect key="frame" x="251" y="71.5" width="147" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="GDG-lL-8qH"/>
@@ -276,7 +277,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvZ-2N-56U">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvZ-2N-56U">
                                         <rect key="frame" x="240" y="327" width="147" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="147" id="Kqc-8h-c4O"/>
@@ -291,6 +292,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="sc6-9R-Yrd"/>
                                 <color key="backgroundColor" name="ZoriPurple"/>
                                 <constraints>
                                     <constraint firstItem="2C1-Ue-WzH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WPa-fS-vsj" secondAttribute="bottom" constant="8" id="12B-P0-4eB"/>
@@ -322,9 +324,9 @@
                                     <constraint firstItem="JtL-of-VSY" firstAttribute="leading" secondItem="sc6-9R-Yrd" secondAttribute="leading" constant="24" id="ylP-D6-JBs"/>
                                     <constraint firstItem="ERS-Fu-2Ig" firstAttribute="leading" secondItem="rqe-1n-K8a" secondAttribute="trailing" constant="16" id="zgA-4F-OKY"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="sc6-9R-Yrd"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="so3-2m-kfP"/>
                         <color key="backgroundColor" name="ZoriPurple"/>
                         <constraints>
                             <constraint firstItem="2Hh-po-amA" firstAttribute="trailing" secondItem="so3-2m-kfP" secondAttribute="trailing" id="AP1-eW-tbc"/>
@@ -332,7 +334,6 @@
                             <constraint firstItem="2Hh-po-amA" firstAttribute="leading" secondItem="so3-2m-kfP" secondAttribute="leading" id="enb-JO-gXU"/>
                             <constraint firstItem="2Hh-po-amA" firstAttribute="top" secondItem="R67-le-NlA" secondAttribute="top" id="tqg-hr-Neq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="so3-2m-kfP"/>
                     </view>
                     <connections>
                         <outlet property="connectionSwitch" destination="rqe-1n-K8a" id="dTi-aY-mvk"/>
@@ -351,13 +352,13 @@
             <objects>
                 <viewController storyboardIdentifier="DeviceCommandViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pdS-cQ-WZF" customClass="DeviceCommandViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Omj-he-phf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cxE-lG-Y8G">
                                 <rect key="frame" x="0.0" y="64" width="414" height="272"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sd-4v-4B4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sd-4v-4B4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="APPS_DEV_CMD_NONE">
@@ -367,7 +368,7 @@
                                             <action selector="selectCommand:" destination="pdS-cQ-WZF" eventType="touchUpInside" id="IOE-gb-0TE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHQ-62-rCA">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHQ-62-rCA">
                                         <rect key="frame" x="0.0" y="48" width="414" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="APPS_DEV_CMD_MOVE_TO">
@@ -377,7 +378,7 @@
                                             <action selector="selectCommand:" destination="pdS-cQ-WZF" eventType="touchUpInside" id="xoH-9Y-NiM"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4r-8u-0ZD">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4r-8u-0ZD">
                                         <rect key="frame" x="0.0" y="96" width="414" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal">
@@ -389,7 +390,7 @@
                                             <action selector="selectCommand:" destination="pdS-cQ-WZF" eventType="touchUpInside" id="dG4-3f-ZOA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-jt-F0T">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-jt-F0T">
                                         <rect key="frame" x="0.0" y="144" width="414" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="APPS_DEV_CMD_STOP">
@@ -399,7 +400,7 @@
                                             <action selector="selectCommand:" destination="pdS-cQ-WZF" eventType="touchUpInside" id="aoc-vY-8pj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7q-Yh-8Xp">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7q-Yh-8Xp">
                                         <rect key="frame" x="0.0" y="192" width="414" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="APPS_DEV_CMD_HARD_STOP">
@@ -411,7 +412,7 @@
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ba5-Jb-4B3">
                                         <rect key="frame" x="0.0" y="240" width="414" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="GJp-eV-Opk"/>
                                         </constraints>
@@ -425,6 +426,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Pd-0U-cdX"/>
                         <color key="backgroundColor" name="ZoriPurple"/>
                         <constraints>
                             <constraint firstItem="xP0-Fx-P5p" firstAttribute="top" secondItem="cxE-lG-Y8G" secondAttribute="bottom" constant="16" id="GbO-t5-WxW"/>
@@ -436,7 +438,6 @@
                             <constraint firstItem="xP0-Fx-P5p" firstAttribute="leading" secondItem="2Pd-0U-cdX" secondAttribute="leading" id="wCU-Ru-TYy"/>
                             <constraint firstItem="2Pd-0U-cdX" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cxE-lG-Y8G" secondAttribute="bottom" id="zBZ-tu-pxQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2Pd-0U-cdX"/>
                     </view>
                     <connections>
                         <outlet property="deviceParamsLabel" destination="xP0-Fx-P5p" id="Z0f-ye-urY"/>
@@ -491,19 +492,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fV-gi-Udw">
-                                        <rect key="frame" x="113" y="741" width="188" height="52"/>
+                                        <rect key="frame" x="179.5" y="741" width="55" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="ldF-EP-CBb"/>
                                         </constraints>
-                                        <state key="normal" image="start">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <state key="normal" title="Details">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <state key="selected" image="stop"/>
                                         <connections>
-                                            <action selector="calibrateTapped:" destination="Bi3-Di-o3K" eventType="touchUpInside" id="fLP-EP-TLG"/>
+                                            <segue destination="YDM-ni-cvV" kind="show" id="6Lh-Rj-GW8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAv-ca-oc1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAv-ca-oc1">
                                         <rect key="frame" x="298" y="115.5" width="100" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="MiQ-Px-7kb"/>
@@ -571,7 +573,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="rzs-eW-Pa9" secondAttribute="trailing" id="trY-wx-6t2"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pI-rm-jpX">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pI-rm-jpX">
                                                 <rect key="frame" x="0.0" y="116" width="382" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Device Command">
@@ -611,6 +613,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="z5e-J1-Rra"/>
                                 <color key="backgroundColor" name="ZoriPurple"/>
                                 <constraints>
                                     <constraint firstItem="4fV-gi-Udw" firstAttribute="centerX" secondItem="z5e-J1-Rra" secondAttribute="centerX" id="19U-PX-u0f"/>
@@ -630,9 +633,9 @@
                                     <constraint firstItem="N5T-8b-vlu" firstAttribute="top" secondItem="MAv-ca-oc1" secondAttribute="bottom" constant="8" id="wBs-9u-T1i"/>
                                     <constraint firstItem="z5e-J1-Rra" firstAttribute="trailing" secondItem="0AZ-Eh-imU" secondAttribute="trailing" constant="8" id="ySO-PB-X20"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="z5e-J1-Rra"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2bM-z3-qBe"/>
                         <color key="backgroundColor" name="ZoriPurple"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cNA-D9-xIV" secondAttribute="bottom" id="Oia-ZM-bhl"/>
@@ -640,7 +643,6 @@
                             <constraint firstItem="cNA-D9-xIV" firstAttribute="leading" secondItem="2bM-z3-qBe" secondAttribute="leading" id="pHc-sl-qrc"/>
                             <constraint firstItem="cNA-D9-xIV" firstAttribute="top" secondItem="3Wt-9E-i0Y" secondAttribute="top" id="tOw-jI-1Je"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2bM-z3-qBe"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="2kj-wc-Xrb">
@@ -699,9 +701,9 @@
             <objects>
                 <tableViewController storyboardIdentifier="RawDataTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe9-dy-J1e" customClass="RawDataTableViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Coj-nE-jg3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="by raw star name" id="gpY-eO-SeD">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -719,7 +721,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uDn-6R-Evc">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -749,12 +751,22 @@
             </objects>
             <point key="canvasLocation" x="2572" y="327"/>
         </scene>
+        <!--Periphery-->
+        <scene sceneID="Q7o-CG-YUw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Periphery" id="YDM-ni-cvV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZEj-EK-6mE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3y-IJ-zu2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="616"/>
+        </scene>
         <!--Current Status View Controller-->
         <scene sceneID="Lfd-Bo-gTH">
             <objects>
                 <viewController storyboardIdentifier="CurrentStatusViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n9P-Yc-wJK" customClass="CurrentStatusViewController" customModule="Zori" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6AO-or-1fn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-qS-ORB">
@@ -764,13 +776,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-cr-5XB">
-                                                <rect key="frame" x="20" y="20" width="45.5" height="24"/>
+                                                <rect key="frame" x="20" y="20" width="45" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-a8-4v7">
-                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <rect key="frame" x="312.5" y="0.0" width="41.5" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
@@ -791,13 +803,13 @@
                                         <rect key="frame" x="0.0" y="64" width="374" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firmware" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mA-5i-Eab">
-                                                <rect key="frame" x="20" y="20" width="74.5" height="24"/>
+                                                <rect key="frame" x="20" y="20" width="74" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzX-FD-65H">
-                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <rect key="frame" x="312.5" y="0.0" width="41.5" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
@@ -818,13 +830,13 @@
                                         <rect key="frame" x="0.0" y="128" width="374" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hardware" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhL-2m-I1V">
-                                                <rect key="frame" x="20" y="20" width="78" height="24"/>
+                                                <rect key="frame" x="20" y="20" width="77.5" height="24"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hr-vZ-4jy">
-                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <rect key="frame" x="312.5" y="0.0" width="41.5" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
@@ -851,7 +863,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-JB-BHX">
-                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <rect key="frame" x="312.5" y="0.0" width="41.5" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
@@ -878,7 +890,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-4n-rvv">
-                                                <rect key="frame" x="312" y="0.0" width="42" height="64"/>
+                                                <rect key="frame" x="312.5" y="0.0" width="41.5" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ZoriCyan"/>
                                                 <nil key="highlightedColor"/>
@@ -897,7 +909,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-Pj-sIv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-Pj-sIv">
                                 <rect key="frame" x="322" y="0.0" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="4kx-nC-qIo"/>
@@ -911,6 +923,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dIQ-AT-KM0"/>
                         <color key="backgroundColor" name="ZoriPurple"/>
                         <constraints>
                             <constraint firstItem="dIQ-AT-KM0" firstAttribute="trailing" secondItem="cGy-qS-ORB" secondAttribute="trailing" constant="20" id="cnk-KU-6jY"/>
@@ -919,7 +932,6 @@
                             <constraint firstItem="cGy-qS-ORB" firstAttribute="leading" secondItem="dIQ-AT-KM0" secondAttribute="leading" constant="20" id="iqg-yV-YsX"/>
                             <constraint firstItem="hyC-Pj-sIv" firstAttribute="top" secondItem="dIQ-AT-KM0" secondAttribute="top" id="lEN-Zw-bm6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dIQ-AT-KM0"/>
                     </view>
                     <connections>
                         <outlet property="azLabel" destination="r0b-JB-BHX" id="I1P-Ic-fYv"/>
@@ -958,5 +970,8 @@
         <namedColor name="ZoriPurple">
             <color red="0.21568627450980393" green="0.12549019607843137" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

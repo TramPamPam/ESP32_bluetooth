@@ -19,6 +19,10 @@
 		A514539F2111D3FA009D1673 /* FullArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A514539E2111D3FA009D1673 /* FullArticleViewController.swift */; };
 		A51CEB9B22ACFB6500EC2D85 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */; };
 		A51CEB9E22ACFF1800EC2D85 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CEB9D22ACFF1800EC2D85 /* RoundedButton.swift */; };
+		A529FA67251766B000BA1C00 /* Periphery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A529FA66251766B000BA1C00 /* Periphery.storyboard */; };
+		A529FA6C2517678100BA1C00 /* CharacteristicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529FA6A2517678100BA1C00 /* CharacteristicTableViewCell.swift */; };
+		A529FA6D2517678100BA1C00 /* CharacteristicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A529FA6B2517678100BA1C00 /* CharacteristicTableViewCell.xib */; };
+		A529FA712517701500BA1C00 /* PeripheryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529FA702517701500BA1C00 /* PeripheryTableViewController.swift */; };
 		A53248DD23CB693B00C30AEC /* CurrentStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */; };
 		A53D7B7822B6257400C5D144 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D7B7722B6257400C5D144 /* Settings.storyboard */; };
 		A53D7B7A22B627AE00C5D144 /* Buttons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53D7B7922B627AE00C5D144 /* Buttons.xcassets */; };
@@ -95,6 +99,10 @@
 		A514539E2111D3FA009D1673 /* FullArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullArticleViewController.swift; sourceTree = "<group>"; };
 		A51CEB9A22ACFB6500EC2D85 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A51CEB9D22ACFF1800EC2D85 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		A529FA66251766B000BA1C00 /* Periphery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Periphery.storyboard; sourceTree = "<group>"; };
+		A529FA6A2517678100BA1C00 /* CharacteristicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicTableViewCell.swift; sourceTree = "<group>"; };
+		A529FA6B2517678100BA1C00 /* CharacteristicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicTableViewCell.xib; sourceTree = "<group>"; };
+		A529FA702517701500BA1C00 /* PeripheryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheryTableViewController.swift; sourceTree = "<group>"; };
 		A53248DC23CB693B00C30AEC /* CurrentStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStatusViewController.swift; sourceTree = "<group>"; };
 		A53D7B7722B6257400C5D144 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A53D7B7922B627AE00C5D144 /* Buttons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Buttons.xcassets; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 		949E3E83207D11BB009E8C0C /* Zori */ = {
 			isa = PBXGroup;
 			children = (
+				A51CEB9C22ACFDA400EC2D85 /* DeviceCommand */,
 				A5B8F89F24D6F2BD00D37673 /* Modules */,
 				A5B8F89E24D6F29C00D37673 /* Views */,
 				A5B8F89C24D6F25600D37673 /* Supporting Files */,
@@ -205,6 +214,10 @@
 				A5727F312111A8690023C482 /* Extensions */,
 				949E3E88207D11BB009E8C0C /* Main.storyboard */,
 				A5727F2C2111A66C0023C482 /* Services */,
+				A529FA66251766B000BA1C00 /* Periphery.storyboard */,
+				A529FA702517701500BA1C00 /* PeripheryTableViewController.swift */,
+				A529FA6A2517678100BA1C00 /* CharacteristicTableViewCell.swift */,
+				A529FA6B2517678100BA1C00 /* CharacteristicTableViewCell.xib */,
 			);
 			path = Zori;
 			sourceTree = "<group>";
@@ -232,7 +245,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A51CEB9C22ACFDA400EC2D85 /* Device settings */ = {
+		A51CEB9C22ACFDA400EC2D85 /* DeviceCommand */ = {
 			isa = PBXGroup;
 			children = (
 				949E3E86207D11BB009E8C0C /* ViewController.swift */,
@@ -241,7 +254,7 @@
 				A5FC158C23E6EE4B00952C44 /* RawDataTableViewController.swift */,
 				A5829DB02504E26900FF7BD6 /* DeviceCommandViewController.swift */,
 			);
-			path = "Device settings";
+			path = DeviceCommand;
 			sourceTree = "<group>";
 		};
 		A5600227214566FC0012D619 /* Constellations */ = {
@@ -349,7 +362,6 @@
 			children = (
 				A588B34321453408005207DC /* Articles */,
 				A5600227214566FC0012D619 /* Constellations */,
-				A51CEB9C22ACFDA400EC2D85 /* Device settings */,
 				A588B3442145343E005207DC /* Stars */,
 			);
 			name = Modules;
@@ -479,8 +491,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A529FA6D2517678100BA1C00 /* CharacteristicTableViewCell.xib in Resources */,
 				949E3E92207D11C1009E8C0C /* LaunchScreen.storyboard in Resources */,
 				A51CEB9B22ACFB6500EC2D85 /* Colors.xcassets in Resources */,
+				A529FA67251766B000BA1C00 /* Periphery.storyboard in Resources */,
 				A56FB28523CB19E700BF2208 /* Joystick.storyboard in Resources */,
 				949E3E8F207D11C1009E8C0C /* Assets.xcassets in Resources */,
 				A5BB950522BF70C7005351A2 /* Loaders.storyboard in Resources */,
@@ -587,6 +601,7 @@
 				A5B8F8A124D6F38300D37673 /* BLEConnector.swift in Sources */,
 				A560022B214568B40012D619 /* ConstellationService.swift in Sources */,
 				A5727F2321119D150023C482 /* Article+CoreDataClass.swift in Sources */,
+				A529FA712517701500BA1C00 /* PeripheryTableViewController.swift in Sources */,
 				A5E8745722ACE478009D0ACF /* JoystickViewController.swift in Sources */,
 				949E3E8D207D11BB009E8C0C /* Zori.xcdatamodeld in Sources */,
 				A5727F3F2111CBC50023C482 /* CustomAlert.swift in Sources */,
@@ -609,6 +624,7 @@
 				A5CBC7C722C8A480004018FF /* BLECommands+DataSource.swift in Sources */,
 				A58B736A240BB55400B308AF /* AngleCalculator.swift in Sources */,
 				A5727F2621119D970023C482 /* CoreDataStack.swift in Sources */,
+				A529FA6C2517678100BA1C00 /* CharacteristicTableViewCell.swift in Sources */,
 				A5727F352111AE710023C482 /* CustomDecodable.swift in Sources */,
 				A5B8F8A324D6F5E500D37673 /* Device.swift in Sources */,
 				A5EE7B9023CB61E500783AFC /* ZoriProperties.swift in Sources */,

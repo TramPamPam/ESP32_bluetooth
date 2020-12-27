@@ -63,7 +63,25 @@ enum Property: String {
     case magnetic_declination = "2b5e4a07-2e9e-11e8-b467-0ed5f89f718b"
 
     ///Device Mode    org.bluetooth.characteristic.device_mode
-    case device_mode = "2b5e8a00-2e9e-11e8-b467-0ed5f89f718b"
+    case device_mode = "2b5e4a02-2e9e-11e8-b467-0ed5f89f718b"
+
+    case battery_service = "180f"
+
+    case battery_level = "2a19"
+
+    case device_information = "180a"
+
+    case model_number_string = "2a24"
+
+    case serial_number_string = "2a25"
+
+    case firmware_revision_string = "2a26"
+
+    case hardware_revision_string = "2a27"
+
+    case manufacturer_name_string = "2a29"
+
+
 
     var value: Any? {
         UserDefaults.standard.value(forKey: rawValue)

@@ -18,23 +18,35 @@ class DeviceDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        services[section].uuid.uuidString
+        if section == 0 {
+            return "logs: "
+        }
+        return services[section-1].uuid.uuidString
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         debugPrint(services)
-        return services.count
+        return services.count + 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        services[section].characteristics?.count ?? 0
+        switch section {
+        case 0:
+            return logs.count
+        default:
+            return 0//services[section - 1].characteristics?.count ?? 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BleInfoCell", for: indexPath)
         cell.textLabel?.textColor = .white
-
-        guard let rawValue = services[indexPath.section].characteristics?[indexPath.row].uuid.uuidString else {
+        if indexPath.section == 0 {
+            cell.textLabel?.text = logs.reversed()[indexPath.row]
+            cell.textLabel?.numberOfLines = 0
+            return cell
+        }
+        guard let rawValue = services[indexPath.section-1].characteristics?[indexPath.row].uuid.uuidString else {
             return cell
         }
 
